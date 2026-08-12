@@ -1,0 +1,43 @@
+Line #,Manufacturer Part Number,Manufacturer,Quantity,Designator,Description,Status
+1,CC0402KRX5R9BB104,Yageo,13,"C1.1, C1.2, C2.1, C2.2, C9, C12.1, C12.2, C13, C14, C15, C16, C19, C23","Surface Mount Ceramic Multilayer Capacitor, 100nF, 10%, X5R, 50V, 0402",Generic
+2,KAF32LR71H106KL,Kyocera AVX,4,"C3, C17, C18, C21","Surface Mount Ceramic Multilayer Capacitor, FLEXITERM, 10uF, 10%, X7R, 50V, 1210",Generic
+3,C0402C101J1GACTU,Kemet,4,"C4, C5, C6, C7","Surface Mount Ceramic Multilayer Capacitor, 100pF, 5%, C0G, 100V, 0402",Generic
+4,EEEFTV151XAP,Panasonic,1,C8,Cap Aluminum Lytic 150uF 35V 20% (6.3 X 7.7mm) SMD 0.16 Ohm 600mA 2000h 105C Automotive T/R,Generic
+5,CC1206KKX7R9BB475,Yageo,1,C10,"Surface Mount Ceramic Multilayer Capacitor, 4.7uF, 10%, X7R, 50V, 1206",Generic
+6,CC0402KRX5R8BB105,Yageo,1,C11,"Surface Mount Ceramic Multilayer Capacitor, 1.0uF, 10%, X5R, 25V, 0402",Generic
+7,CC0402KRX5R9BB223,Yageo,1,C20,"Surface Mount Ceramic Multilayer Capacitor, 22nF, 10%, X5R, 50V, 0402",Generic
+8,CC0402KRX5R9BB474,Yageo,1,C22,"Surface Mount Ceramic Multilayer Capacitor, 470nF, 10%, X5R, 50V, 0402",Generic
+9,CC0603KPX7R9BB224,Yageo,2,"C25, C26","Surface Mount Ceramic Multilayer Capacitor, 220nF, 10%, X7R, 50V, 0603",Generic
+10,CC1206KKX5R8BB226,Yageo,2,"C27, C28","Surface Mount Ceramic Multilayer Capacitor, 22uF, 10%, X5R, 25V, 1206",Generic
+11,CC0402KRNPO9BN220,Yageo,1,C29,"Surface Mount Ceramic Multilayer Capacitor, 22pF, 10%, C0G, 50 V, 0402",Generic
+12,SMF26A,Littelfuse,4,"D1.1, D1.2, D2, D11","ESD Diode, 26 V Standoff, 42 V Clamp, ±30 kV Protection, 100 pF, SOD-123FL",Likely Replaceable
+13,MSS1P6-M3/89A,Vishay,8,"D3, D4, D5, D6, D7, D8, D9, D10","Schottky Diode, Vrrm = 60 V, Vf = 520 mV @ 1 A, MicroSMP (DO-219AD)",Likely Replaceable
+14,SESD0402X1UN-0030-088,Littelfuse,9,"D12, D13, D14, D15, D16, D17, D18, D19, D20","ESD Diode, 7.0 V Standoff, 8.8 V Clamp, ±22 kV Protection, 0.3 pF, 0402 DFN",Likely Replaceable
+15,APT1608SYCK,Kingbright,1,DS1,APT1608SYCK Yellow LED; 590 nm 1608 (0603) Clear; Rectangle Lens SMD package,Likely Replaceable
+16,LTST-C190TBKT,LITEON,1,DS2,"LED Uni-Color Blue, 76 mW, 20 mA, -20 to 80 degC, 2-Pin SMD, RoHS, Tape and Reel",Likely Replaceable
+17,0154001.DR,Littelfuse,1,F1,"Fuse, Very Fast Acting, 1A, 125V, SMD",Likely Replaceable
+18,705450004,Molex,1,J1,"2.54mm Pitch SL Header, Single Row, 3.05mm Pocket, Vertical, Shrouded, with Press-Fit Plastic Peg, 5 Circuits, Tin (Sn) Plating",Connector
+19,RJHSE538102,Amphenol,1,J2,"RJ45 Jack, Right Angle, 2 port, 8P8C, Cat5, Shielded, Through Hole",Connector
+20,436500317,Molex,2,"J5.1, J5.2","Micro-Fit 3.0 Vertical Header, 3.00mm Pitch, Single Row, 3 Circuits, with PCB Polarizing Peg, 0.76µm Gold Plating",Connector
+21,430450427,Molex,1,J6,"Micro-Fit 3.0 Vertical Header, 3.00mm Pitch, Dual Row, 4 Circuits, with PCB Polarizing Peg, 1.52µm Matte Tin Plating",Connector
+22,742792731,Wurth Elektronik,14,"L1.1, L1.2, L2.1, L2.2, L3.1, L3.2, L8, L9, L10, L12, L13, L14, L15, L16","Ferrite Bead, 90 mΩ DC, 100 Ω @ 100 MHz ± 25%, 1200 mA, 0402 [1005 Metric]",Generic
+23,742792114,Wurth Elektronik,4,"L4, L5, L6, L7","Ferrite Bead, 25 mΩ DC, 50 Ω @ 100 MHz ± 25%, 3000 mA, 1206 [3216 Metric]",Generic
+24,B82787C0513H002,TDK,1,L11,"Choke, Common Mode, 51 uH, 2.8 kOhm, 200 mA, 1812 [4532 Metric]",Likely Replaceable
+25,74438357100,Wurth Elektronik,1,L17,"Fixed Inductor, Moulded, 10 µH ± 20%, 100 mΩ DC, 3 A Isat, 1616 [4040 Metric]",Likely Replaceable
+26,CRCW04025K10FKED,Vishay,2,"R1.1, R1.2","SMD Chip Resistor, 5.10 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+27,CRCW04021K00FKTD,Vishay,4,"R2.1, R2.2, R17, R18","SMD Chip Resistor, 1.00 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+28,CRCW040212K0FKED,Vishay,1,R3,"SMD Chip Resistor, 12.0 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+29,CRCW04021K50FKTD,Vishay,3,"R4, R6, R7","SMD Chip Resistor, 1.50 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+30,CRCW040211K0FKED,Vishay,1,R5,"SMD Chip Resistor, 11.0 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+31,WSL1206R1500FEA,Vishay,2,"R8, R20","Powder Metal Strip Resistor, 0.15R, ±1%, 0.25 W, -55 to 155 °C, 1206",Generic
+32,CRCW0402560RFKED,Vishay,5,"R9, R11, R12, R13, R15","SMD Chip Resistor, 560 ohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+33,CRCW04026K20FKED,Vishay,1,R10,"SMD Chip Resistor, 6.20 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+34,CRCW06033K40FKEA,Vishay,1,R14,"SMD Chip Resistor, 3.4 kOhm, ± 1%, 100 mW, 0603 [1608 Metric], Thick Film, General Purpose",Generic
+35,CRCW0402100KFKED,Vishay,1,R16,"SMD Chip Resistor, 100 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+36,CRCW040210R0FKED,Vishay,1,R19,"SMD Chip Resistor, 10.0 ohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+37,CRCW040224K9FKED,Vishay,1,R21,"SMD Chip Resistor, 24.9 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+38,CRCW040210K0FKED,Vishay,1,R23,"SMD Chip Resistor, 10.0 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose",Generic
+39,TMC5130A-TA,Analog Devices,1,U1,"Stepper motor driver, 4.75 to 46 Vin, 1.4ARMS, SPI Interface, 256 µSteps, QFP-48",Critical
+40,LTC6900IS5#TRPBF,Analog Devices,1,U2,"Oscillator, 1kHz to 20MHz, Resistor Set, SOT23-5",Critical
+41,SN74LVC1G17DCK3,Texas Instruments,2,"U3.1, U3.2","Single Buffer, 1.65 - 5.5 Vin, Schmitt-Trigger input, SC70-5",Probably Replaceable
+42,LMR36015BRNXR,Texas Instruments,1,U4,"Buck Converter, Integrated Switch, 4.2-60 Vin, 1.5 A, VQFN-HR-12",Critical

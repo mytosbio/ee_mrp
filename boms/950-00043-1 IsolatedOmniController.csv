@@ -1,0 +1,84 @@
+Line #,Name,Description,Ref Des,Quantity,Manufacturer,Manufacturer Part Number,Status
+1,Capacitor 100 nF +/-10% 50 V 0603,"Chip Capacitor, 100 nF, +/- 10%, 50 V, 0603 (1608 Metric)","C1.1, C1.2, C1.3, C1.4, C1.5, C4, C5, C15, C53.1, C53.10, C53.2, C53.3, C53.4, C53.5, C53.6, C53.7, C53.8, C53.9, C56.1, C56.2, C57.1, C57.2",22,Yageo Group,CC0603KRX7R9BB104,Generic
+2,Capacitor 100nF +/-20% 50V 0402,"Chip Capacitor, 100nF +/-20%, 50V, 0402, Thickness 0.6 mm","C2, C13, C24, C26, C49, C50, C51, C52.1, C52.10, C52.2, C52.3, C52.4, C52.5, C52.6, C52.7, C52.8, C52.9, C54.1, C54.10, C54.2, C54.3, C54.4, C54.5, C54.6, C54.7, C54.8, C54.9",27,Murata,GRM155R71H104KE14D,Generic
+3,Capacitor 1µF +/-40% 50V 0603,"Chip Capacitor, 1µF +/-40%, 50V, 0603, Thickness 1 mm","C3, C12, C14, C55.1, C55.2",5,Samsung Electro-Mechanics,CL10A105KB8NNNC,Generic
+4,"Capacitor 2,2µF +/-20% 10V 0402","Chip Capacitor, 2,2µF +/-20%, 10V, 0402, Thickness 0.6 mm",C6,1,Murata,GRM155R61C225KE44D,Generic
+5,EEEFTV151XAP,Cap Aluminum Lytic 150uF 35V 20% (6.3 X 7.7mm) SMD 0.16 Ohm 600mA 2000h 105C Automotive T/R,"C7.1, C7.2, C7.3, C7.4, C7.5",5,Panasonic,EEEFTV151XAP,Generic
+6,C0402C101J1GACTU,CAP CER 100PF 100V NP0 0402,"C8.1, C8.2, C8.3, C8.4, C8.5, C9.1, C9.2, C9.3, C9.4, C9.5, C10.1, C10.2, C10.3, C10.4, C10.5, C11.1, C11.2, C11.3, C11.4, C11.5",20,Yageo Group,C0402C101J1GACTU,Generic
+7,Capacitor 0.1 uF +/- 5% 16 V 0402,"Chip Capacitor, 0.1 uF, +/- 5%, 16 V, 0402 (1005 Metric)","C16.1, C16.2, C16.3, C16.4, C16.5, C17.1, C17.2, C17.3, C17.4, C17.5, C59",11,Yageo Group,C0402C104J4RACTU,Generic
+8,Capacitor 1 uF +/- 10% 25 V 0603,"Chip Capacitor, 1 uF, +/- 10%, 25 V, 0603 (1608 Metric)","C18, C23, C25",3,Yageo Group,CC0603KRX7R8BB105,Generic
+9,CC0402CRNPO9BN6R8,0402 6.8 pF 50 V ±0.25 pF Tolerance NP0 SMT Multilayer Ceramic Capacitor,"C19, C20",2,Yageo Group,CC0402CRNPO9BN6R8,Generic
+10,C1005C0G1H080D050BA,Multilayer Ceramic Capacitors MLCC - SMD/SMT 0402 8pF 50V C0G 0.5pF,"C21, C22",2,TDK,CGA2B2C0G1H080D050BA,Generic
+11,Capacitor 10µF +/-40% 6.3V 0402,"Chip Capacitor, 10µF +/-40%, 6.3V, 0402, Thickness 0.6 mm","C27, C47",2,Murata,GRM155R60J106ME15D,Generic
+12,Capacitor 100nF +/-20% 25V 0402,"Chip Capacitor, 100nF +/-20%, 25V, 0402, Thickness 0.6 mm","C28, C29, C30, C31, C32, C33, C34, C35, C36, C38, C39, C41, C43, C44, C45",15,Samsung Electro-Mechanics,CL05A104KA5NNNC,Generic
+13,Capacitor 4.7µF +/-20% 10V 0603,"Chip Capacitor, 4.7µF +/-20%, 10V, 0603, Thickness 1 mm","C37, C46",2,Yageo Group,CC0603KRX5R6BB475,Generic
+14,Capacitor 1uF +/- 10% 16V 0603,"Chip Capacitor, 1 uF, +/- 10%, 16 V, 0603 (1608 Metric)","C40, C42",2,Yageo Group,C0603C105K4RACTU,Generic
+15,Capacitor 1µF +/-20% 10V 0402,"Chip Capacitor, 1µF +/-20%, 10V, 0402, Thickness 0.6 mm",C48,1,Yageo Group,CC0402KRX5R6BB105,Generic
+16,Capacitor 100nF +/-20% 10V 0402,"Chip Capacitor, 100nF +/-20%, 10V, 0402, Thickness 0.6 mm",C58,1,Yageo Group,CC0402KRX7R6BB104,Generic
+17,Capacitor 4.7µF +/-40% 25V 0805,"Chip Capacitor, 4.7µF +/-40%, 25V, 0805, Thickness 1.45 mm",C60,1,KYOCERA AVX,08053D475MAT2A,Generic
+18,Capacitor 10nF +/-20% 50V 0402,"Chip Capacitor, 10nF +/-20%, 50V, 0402, Thickness 0.6 mm",C61,1,Yageo Group,C0402C103K5RACTU,Generic
+19,14-pin DEBUG header,Conn Unshrouded Header HDR 14 POS 1.27mm Solder ST Top Entry SMD Tube,CN1,1,Samtec,FTSH-107-01-L-DV-K,Connector
+20,SMF26A,SMF Series 200 W 26 V Uni-Directional Surface Mount TVS Diode - SOD-123F,"D1, D3, D6.1, D6.2, D6.3, D6.4, D6.5, D18, D25, D28, D32.1, D32.10, D32.2, D32.3, D32.4, D32.5, D32.6, D32.7, D32.8, D32.9, D33.1, D33.2",22,Littelfuse,SMF26A,Likely Replaceable
+21,ESDA7P60-1U1M,ESDA Series 6.4 V 700 W SMT Uni-Directional TVS Diode - 1610,"D2, D16, D19.1, D19.2, D19.3, D19.4, D19.5, D20, D21, D22, D24",11,STMicroelectronics,ESDA7P60-1U1M,Likely Replaceable
+22,ESD9X3.3ST5G,TVS DIODE 3.3VWM 10.4VC SOD923,"D4, D5, D23, D26, D30, D31, D34.1, D34.2, D35.1, D35.2",10,onsemi,ESD9X3.3ST5G,Likely Replaceable
+23,B5819WS-TP,DIODE SCHOTTKY 40V 1A SOD323,"D7.1, D7.2, D7.3, D7.4, D7.5, D8.1, D8.2, D8.3, D8.4, D8.5, D9.1, D9.2, D9.3, D9.4, D9.5, D10.1, D10.2, D10.3, D10.4, D10.5, D11.1, D11.2, D11.3, D11.4, D11.5, D12.1, D12.2, D12.3, D12.4, D12.5, D13.1, D13.2, D13.3, D13.4, D13.5, D14.1, D14.2, D14.3, D14.4, D14.5, D17",41,MCC,B5819WS-TP,Likely Replaceable
+24,B0540W-7-F,DIODE SCHOTTKY 40V 500MA SOD123,D15,1,Diodes Inc.,B0540W-7-F,Likely Replaceable
+25,USBLC6-2SC6,TVS DIODE 5.25VWM 17VC SOT23-6,D27,1,STMicroelectronics,USBLC6-2SC6,Likely Replaceable
+26,1N4148WS,"Small Signal Diode, 75 V, 0.15 A, -55 to 150 degC, 2-Pin SOD-323, RoHS, Tape and Reel",D29,1,onsemi,1N4148WS,Likely Replaceable
+27,APT1608SYCK,APT1608SYCK Yellow LED; 590 nm 1608 (0603) Clear; Rectangle Lens SMD package,"DS1.1, DS1.2, DS1.3, DS1.4, DS1.5, DS3, DS4, DS7.1, DS7.2, DS7.3, DS7.4, DS7.5",12,Kingbright,APT1608SYCK,Likely Replaceable
+28,LTST-C190TBKT,"LED Uni-Color Blue, 76 mW, 20 mA, -20 to 80 degC, 2-Pin SMD, RoHS, Tape and Reel","DS2.1, DS2.2, DS2.3, DS2.4, DS2.5, DS8",6,Diodes Inc.,LTST-C190TBKT,Likely Replaceable
+29,APT1608SGC,"Super Bright Green LED, 62.5 mW, 25 mA, -40 to 85 degC, 2-Pin SMD, RoHS, Tape and Reel","DS5.1, DS5.2, DS5.3, DS5.4, DS5.5, DS9",6,Kingbright,APT1608SGC,Likely Replaceable
+30,APT1608EC,APT1608EC Red LED; 617 nm 1608 (0603) Clear; Rectangle Lens SMD package,"DS6.1, DS6.2, DS6.3, DS6.4, DS6.5",5,,,Likely Replaceable
+31,LTST-C190KFKT,"LED Uni-Color Orange, 75 mW, 30 mA, -35 to 85 degC, 2-Pin SMD, RoHS, Tape and Reel",DS10,1,Diodes Inc.,LTST-C190KFKT,Likely Replaceable
+32,BLM31KN121SN1L,Ferrite Beads Multi-Layer 120Ohm 25% 100MHz 6A 0.009Ohm DCR 1206 Automotive T/R,"FB1, FB2, FB3, FB4",4,Murata,BLM31KN121SN1L,Generic
+33,TMC5130_Hopper,TMC5130 based hopper PCB,"H1.1, H1.2, H1.3, H1.4, H1.5",5,,,Ignore
+34,Molex - 4 pin - thru-hole - vertical,Conn Header 4 POS 3mm Solder ST Thru-Hole 4 Terminal 1 Port Micro-Fit 3.0 Tray,"J1, J3.1, J3.2, J3.3, J3.4, J3.5, J4, J7, J11",9,Molex,43045-0427,Connector
+35,Molex - 6 pin - thru-hole - vertical,Conn Wire to Board HDR 6 POS 3mm Solder ST Thru-Hole Micro-Fit 3.0™ Tray,J2,1,Molex,43045-0627,Connector
+36,43650-0317,Conn Power HDR 3 POS 3mm Solder ST Thru-Hole 3 Terminal 1 Port Micro-Fit 3.0™ Frame,"J5, J9.1, J9.10, J9.2, J9.3, J9.4, J9.5, J9.6, J9.7, J9.8, J9.9",11,Molex,43650-0317,Connector
+37,Molex - 10 pin - thru-hole - vertical - encoder,Connector used by US Digital encoders,"J6.1, J6.2, J6.3, J6.4, J6.5",5,Molex,15-47-7610,Connector
+38,217179-0001,Connector USB Type C Female 16Positions 0.5mm Right Angle SMT Embossed T/R,J8,1,Molex,217179-0001,Connector
+39,43650-0417,Connector Header 4 Position 3 mm Solder Straight Thru-Hole 4 Terminal 1 Port Micro-Fit 3.0™,"J10.1, J10.2",2,Molex,43650-0429,Connector
+40,742792731,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 100 Ohm","L1, L2, L3, L4, L5, L6, L7, L8, L9.1, L9.2, L9.3, L9.4, L9.5, L14, L15, L16, L17, L18, L19, L20.1, L20.2, L20.3, L20.4, L20.5, L21.1, L21.2, L21.3, L21.4, L21.5, L22, L23, L24, L25, L26, L27, L28, L29, L30, L31, L32, L33, L34, L35, L36, L37.1, L37.10, L37.2, L37.3, L37.4, L37.5, L37.6, L37.7, L37.8, L37.9, L38.1, L38.10, L38.2, L38.3, L38.4, L38.5, L38.6, L38.7, L38.8, L38.9, L39.1, L39.10, L39.2, L39.3, L39.4, L39.5, L39.6, L39.7, L39.8, L39.9, L40.1, L40.2, L41.1, L41.2, L42.1, L42.2, L43.1, L43.2, L44, L45",84,Wurth Elektronik,742792731,Generic
+41,742792114,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 50 Ohm","L10.1, L10.2, L10.3, L10.4, L10.5, L11.1, L11.2, L11.3, L11.4, L11.5, L12.1, L12.2, L12.3, L12.4, L12.5, L13.1, L13.2, L13.3, L13.4, L13.5",20,Wurth Elektronik,742792114,Generic
+42,30 pin header - shrouded,"30 Position Header Connector 0.100"" (2.54mm) Through Hole Shrouded","P5, P6",2,Molex,70246-3001,Connector
+43,DMG1012T-7,"Transistor MOSFET NTR4003NT1G, SOT23, ON Semi","Q1, Q2, Q3",3,Diodes Inc.,DMG1012T-7,Likely Replaceable
+44,MMBT3906TT1G,"General Purpose Transistor, PNP Silicon, 3-Pin SC-75, Pb-Free, Tape and Reel",Q4,1,onsemi,MMBT3906TT1G,Likely Replaceable
+45,5K1 1% 0603(1608),5K1 0.1W 1% 0603 (1608 Metric)  SMD,"R1.1, R1.2, R1.3, R1.4, R1.5, R4.1, R4.2, R4.3, R4.4, R4.5, R7.1, R7.2, R7.3, R7.4, R7.5, R10.1, R10.2, R10.3, R10.4, R10.5, R56, R57",22,Bourns,CR0603-FX-5101ELF,Generic
+46,Resistor 1k +/-1% 0402 100 mW,"Chip Resistor, 1 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0402 (1005 Metric)","R2.1, R2.2, R2.3, R2.4, R2.5, R8.1, R8.2, R8.3, R8.4, R8.5, R64, R67",12,Panasonic / Panasonic ECG,ERJ-2RKF1001X,Generic
+47,Resistor 2K +/-5 % 0402 63 mW,"Chip Resistor, 2 kOhms, +/-5 %, 63 mW, -55 to 155 degC, 0402","R3.1, R3.2, R3.3, R3.4, R3.5, R9.1, R9.2, R9.3, R9.4, R9.5, R25.1, R25.2, R25.3, R25.4, R25.5, R30.1, R30.2, R30.3, R30.4, R30.5, R34.1, R34.2, R34.3, R34.4, R34.5",25,Yageo Group,RC0402JR-072KL,Generic
+48,Resistor 6K2  +/-5 % 0402 63 mW,"Chip Resistor, 6,2 kOhms, +/-5 %, 63 mW, -55 to 155 degC, 0402","R5.1, R5.2, R5.3, R5.4, R5.5, R18, R35.1, R35.2, R35.3, R35.4, R35.5",11,Yageo Group,RC0402JR-076K2L,Generic
+49,Resistor 10k +/-1% 0402 100 mW,"Chip Resistor, 10 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0402 (1005 Metric)","R6.1, R6.2, R6.3, R6.4, R6.5, R12.1, R12.2, R12.3, R12.4, R12.5",10,Panasonic,ERJ-2RKF1002X,Generic
+50,CRCW06033K40FKEA,"SMD Chip Resistor, 3.4 kOhm, ± 1%, 100 mW, 0603 [1608 Metric], Thick Film, General Purpose","R11.1, R11.2, R11.3, R11.4, R11.5",5,Vishay,CRCW06033K40FKEA,Generic
+51,100R 1% 0603(1608),100R 0.1W 1% 0603 (1608 Metric)  SMD,"R13, R27.1, R27.2, R27.3, R27.4, R27.5, R29.1, R29.2, R29.3, R29.4, R29.5, R32.1, R32.2, R32.3, R32.4, R32.5, R37, R38, R40, R51, R52, R70.1, R70.10, R70.2, R70.3, R70.4, R70.5, R70.6, R70.7, R70.8, R70.9, R73.1, R73.2, R76.1, R76.2",35,Bourns,CR0603-FX-1000ELF,Generic
+52,ERJ3EKF1002V,"Chip Resistor, 10 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Reel",R14,1,Vishay,CRCW060310K0FKEC,Generic
+53,Resistor 100k +/-1% 0603 100 mW,"Chip Resistor, 100 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R15,1,Yageo Group,RC0603FR-13100KL,Generic
+54,10K 1% 0603(1608),10K 0.1W 1% 0603 (1608 Metric)  SMD,"R16, R19, R20, R21, R24.1, R24.2, R24.3, R24.4, R24.5, R36, R39",11,Vishay,CRCW060310K0FKEC,Generic
+55,Resistor 44K2 +/-1 % 0402 63 mW,"Chip Resistor, 44,2 kOhms, +/-1 %, 63 mW, -55 to 155 degC, 0402",R17,1,Yageo Group,RC0402FR-0744K2L,Generic
+56,Resistor 10k +/-1% 0402 63 mW,"Chip Resistor, 10 KOhm, +/- 1%, 63 mW, -55 to 155 degC, 0402 (1005 Metric)","R22, R63, R65, R80, R81, R82",6,Yageo Group,RC0402FR-0710KL,Generic
+57,1K 1% 0603(1608),1K 0.1W 1% 0603 (1608 Metric)  SMD,"R23.1, R23.2, R23.3, R23.4, R23.5, R28.1, R28.2, R28.3, R28.4, R28.5, R31.1, R31.2, R31.3, R31.4, R31.5, R33.1, R33.2, R33.3, R33.4, R33.5, R71.1, R71.10, R71.2, R71.3, R71.4, R71.5, R71.6, R71.7, R71.8, R71.9, R74.1, R74.2, R77.1, R77.2",34,Vishay,CRCW06031K00FKEB,Generic
+58,Resistor 1K82 +/-1 % 0402 63 mW,"Chip Resistor, 1,82 kOhms, +/-1 %, 63 mW, -55 to 155 degC, 0402","R26.1, R26.2, R26.3, R26.4, R26.5",5,Yageo Group,RC0402FR-071K82L,Generic
+59,Resistor 22R  +/-5 % 0402 63 mW,"Chip Resistor, 22 Ohms, +/-5 %, 63 mW, -55 to 155 degC, 0402","R41, R42, R43",3,Yageo Group,RC0402JR-0722RL,Generic
+60,Resistor 4k7 +/-1% 0402 100 mW,"Chip Resistor, 4.7 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0402 (1005 Metric)","R49, R50, R53, R54",4,Panasonic,ERJ-2RKF4701X,Generic
+61,0R2J,Jumper 0402 (1005 Metric),"R55, R59, R60",3,Yageo Group,RC0402JR-070RL,Generic
+62,620R 1% 0603(1608),620R 0.1W 1% 0603 (1608 Metric)  SMD,"R58, R66",2,Vishay,CRCW0603620RFKEA,Generic
+63,Resistor 100R +/-1 % 0402 63 mW,"Chip Resistor, 100 Ohms, +/-1 %, 63 mW, -55 to 155 degC, 0402","R61, R68",2,Vishay,CRCW0402100RFKED,Generic
+64,Resistor 1M +/-1 % 0402 63 mW,"Chip Resistor, 1 MOhms, +/-1 %, 63 mW, -55 to 155 degC, 0402",R62,1,Vishay,CRCW04021M00FKED,Generic
+65,CRCW06035K10FKEA,"RES Thick Film, 5.1kΩ, 1%, 0.1W, 100ppm/°C, 0603","R69.1, R69.10, R69.2, R69.3, R69.4, R69.5, R69.6, R69.7, R69.8, R69.9",10,Bourns,CR0603-FX-5101ELF,Generic
+66,CRCW04026K98FKED,Res Thick Film 0402 6.98K Ohm 1% 1/16W ±100ppm/°C Molded SMD SMD Paper T/R,"R72.1, R72.2, R75.1, R75.2",4,Vishay,CRCW04026K98FKED,Generic
+67,Resistor 200K +/-1 % 0402 63 mW,"Chip Resistor, 200 kOhms, +/-1 %, 63 mW, -55 to 155 degC, 0402",R78,1,Yageo Group,RC0402FR-07200KL,Generic
+68,CRCW0402215KFKED,Res Thick Film 0402 215K Ohm 1% 1/16W ±100ppm/°C Molded SMD SMD Paper T/R,R79,1,Vishay,CRCW0402215KFKED,Generic
+69,B3U-1000P,SWITCH TACTILE SPST-NO 0.05A 12V,"SW1, SW2",2,Omron,B3U-1000P,Likely Replaceable
+70,LMV358MX/NOPB,"General Purpose, Low Voltage, Rail-to-Rail Output Operational Amplifiers 8-SOIC -40 to 125","U1.1, U1.2, U1.3, U1.4, U1.5",5,Texas Instruments,LMV358MX/NOPB,Critical
+71,ITS4141N,ITS4141N Series 45 V 1.4 A 200 mOhms Smart High-Side Power Switch - SOT-223-4,U2,1,Infineon,ITS4141NHUMA1,Critical
+72,MIC2005A-1YM5-TR,"LOAD SWITCH, HS, 5.5V, 0.5A, 5SOT23; Power Load Switch Type: High Side; Input Vol","U3.1, U3.2, U3.3, U3.4, U3.5",5,Microchip,MIC2005A-1YM5-TR,Critical
+73,SMS05T1G,"Quad Transient Voltage Suppressor, for ESD Protection, 6-Pin SC-74, Pb-Free, Tape and Reel","U4.1, U4.2, U4.3, U4.4, U4.5, U6.1, U6.2, U6.3, U6.4, U6.5",10,onsemi,SMS05T1G,Critical
+74,AM26C32QDR,Quadruple Differential Line Receiver 16-SOIC -40 to 125,"U5.1, U5.2, U5.3, U5.4, U5.5",5,Texas Instruments,AM26C32QDR,Critical
+75,STM32U575ZIT6,MCU 32-bit ARM Cortex M33 RISC 2MB Flash 1.8V/2.5V/3.3V 144-Pin LQFP,U7,1,STMicroelectronics,STM32U575ZIT6,Critical
+76,LD39050PU33R,Linear Voltage Regulator IC Positive Fixed 1 Output 3.3V 500mA 6-DFN (3x3),U8,1,STMicroelectronics,LD39050PU33R,Critical
+77,ESDALC6V1W5,TVS DIODE 3VWM SOT3235,"U9, U10",2,STMicroelectronics,ESDALC6V1W5,Critical
+78,"74LVC1G14GV,125",IC SNGL SCHMITT TRIG INV 5TSOP,"U11, U12",2,Nexperia,"74LVC1G14GV,125",Critical
+79,NE555DR,IC OSC SGL TIMER 100KHZ 8-SOIC,U14,1,Texas Instruments,NE555DR,Critical
+80,644-EXS00A-CS07826-16M,Crystal 16.0000MHZ 8PF SMD,X1,1,NDK,CS07826-16M,Critical
+81,ECS-.327-9-1210-TR,Crystal 32.768KHZ 9PFSMD ECX-1210 Khz Crystal 32.768KHZ 20PPM 90K Ohm -40C ~ 85C 2-SMD,X2,1,ECS International,ECS-.327-9-1210-TR,Critical
+82,0154004.DR,FUSE BRD MNT 4A 125VAC/VDC 2SMD,XF1,1,Littelfuse,0154004.DR,Critical
+83,0154001.DR,"Very Fast-Acting Fuse, 1 A, -55 to 125 degC, 2-Pin SMD, RoHS, Tape and Reel",XF2,1,Littelfuse,0154001.DR,Critical

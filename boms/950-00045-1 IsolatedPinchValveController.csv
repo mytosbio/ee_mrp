@@ -1,0 +1,41 @@
+Line #,Name,Description,Designator,Quantity,Value,Manufacturer,Manufacturer Part Number,Status
+1,CAP,"Capacitor, Generic","C1, C2",2,100n,Kyocera AVX,06035C104KAT2A,Generic
+5,Capacitor 10 uF +/- 10% 16 V 0805,"Chip Capacitor, 10 uF, +/- 10%, 16 V, 0805 (2012 Metric)",C10,1,10µF,Murata,GRM21BR61C106KE15L,Generic
+2,Capacitor 100 nF +/-10% 50 V 0603,"Chip Capacitor, 100 nF, +/- 10%, 50 V, 0603 (1608 Metric)","C3, C4, C5, C11",4,100nF,Yageo,CC0603KRX7R9BB104,Generic
+3,Capacitor 1uF +/- 10% 16V 0603,"Chip Capacitor, 1 uF, +/- 10%, 16 V, 0603 (1608 Metric)",C6,1,1µF,KEMET,C0603C105K4RACTU,Generic
+4,22nF C0G 5%,Cap Ceramic 22nF 50V C0G 5% Pad SMD 0805 +125°C Automotive T/R,"C7, C8, C9",3,,TDK,CGA4J2C0G1H223J125AA,Generic
+6,SMBJ26A,TVS DIODE 26V 42.1V DO214AA,"D1, D2",2,,Littelfuse,SMBJ26A,Likely replaceable
+7,ESDA7P60-1U1M,ESDA Series 6.4 V 700 W SMT Uni-Directional TVS Diode - 1610,"D3, D4",2,,STMicroelectronics,ESDA7P60-1U1M,Likely replaceable
+8,BAT46ZFILM,DIODE SCHOTTKY 100V 150MA SOD123,D5,1,10pF,STMicroelectronics,BAT46ZFILM,Likely replaceable
+9,APT1608SGC,"Super Bright Green LED, 62.5 mW, 25 mA, -40 to 85 degC, 2-Pin SMD, RoHS, Tape and Reel","DS1, DS2, DS3.1, DS3.2, DS3.3, DS3.4, DS3.5, DS3.6, DS3.7, DS3.8",10,,Kingbright,APT1608SGC,Likely replaceable
+10,APT1608SYCK,APT1608SYCK Yellow LED; 590 nm 1608 (0603) Clear; Rectangle Lens SMD package,DS4,1,,Kingbright,APT1608SYCK,Likely replaceable
+,43045-0615,Conn Micro-Fit Power HDR 6 POS 3mm Solder ST SMD 6 Terminal 1 Port Emboss T/R,"J1, J2",2,,Molex,430450615,Connector
+,43045-0415,"Header, 2 Row, Vertical, Retention Clip, 4 Pin, Tin Plate, SMT, Glow Wire Compatible","J3, J4",2,,Molex,430450415,Connector
+11,30 pin header - shrouded,"30 Position Header Connector 0.100"" (2.54mm) Through Hole Shrouded",P1,1,,Molex,702463001,Connector
+12,TSW-102-26-T-S,.100 Terminal Strip Assembly 550 VAC 7 Amp Through Hole Unshrouded Header 5.08mm,P2,1,,Samtec,TSW-102-26-T-S,Connector
+13,DMG1012T-7,"Transistor MOSFET NTR4003NT1G, SOT23, ON Semi",Q1,1,,Diodes,DMG1012T-7,Likely replaceable
+14,4K7 1% 0603(1608),4K7 0.1W 1% 0603 (1608 Metric) SMD,"R1, R2",2,4k7,Yageo,RC0603FR-074K7L,Generic
+17,"Resistor 10k +/-1% 0603 100 mW, RES-2","Chip Resistor, 10 KOhm, +/- 1%, 01 W, -55 to 155 degC, 0603 (1608 Metric)","R11, R18, R19, R20, R25, R27, R31, R37",8,10k,Vishay,CRCW060310K0FKEA,Generic
+18,Resistor 22k +/-1% 0603 100 mW,"Chip Resistor, 22 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R12,1,22k,Yageo,RC0603FR-0722KL,Generic
+25,"RES-2, Resistor 100k +/-1% 0603 100 mW","Chip Resistor, 100 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R13, R21, R22, R23, R29, R36",6,100k,Yageo,RC0603FR-13100KL,Generic
+23,RES-2,"Chip Resistor, 200 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R16,1,200k,Vishay,CRCW0603200KFKEA,Generic
+24,RES-2,"Chip Resistor, 215k KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R17,1,215k,Vishay,CRCW0603215KFKEA,Generic
+26,Resistor 6K2 +/-5 % 0402 63 mW,"Chip Resistor, 6,2 kOhms, +/-5 %, 63 mW, -55 to 155 degC, 0402",R24,1,6.2k,Yageo,RC0402JR-076K2L,Generic
+,Resistor 3.3k +/-1% 0603 100 mW,"Chip Resistor, 3.3 KOhm, +/-1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R26,1,3.3k,,,Generic
+15,RES-2,"Chip Resistor, 500 Ohm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R3.1, R3.2, R3.3, R3.4, R3.5, R3.6, R3.7, R3.8",8,500R,Yageo,RT0603BRC07500RL,Generic
+28,Resistor 120R +/-5 % 0603 0.1 W,"Chip Resistor, 120 Ohms, +/-5 %, 0.1 W, -55 to 155 degC, 0603",R32,1,120,Vishay Dale,CRCW0603120RJNEA,Generic
+16,"RES-2, Resistor 1k +/-1% 0603 100 mW","Chip Resistor, 1 KOhm, +/-1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R4.1, R4.2, R4.3, R4.4, R4.5, R4.6, R4.7, R4.8, R30, R35",10,1k,Yageo,RC0603FR-071KL,Generic
+20,RES-2,"Chip Resistor, 560 Ohm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R5.1, R5.2, R5.3, R5.4, R5.5, R5.6, R5.7, R5.8, R38, R39",10,560R,,,Generic
+19,"RES-2, Resistor 4k7 +/-1% 0603 100 mW","Chip Resistor, 4.7 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R6.1, R6.2, R6.3, R6.4, R6.5, R6.6, R6.7, R6.8, R8.1, R8.2, R8.3, R8.4, R8.5, R8.6, R8.7, R8.8, R14, R15, R28, R33, R34",21,4.7k,Yageo,RC0603FR-134K7L,Generic
+21,RES-2,"Chip Resistor, 22 Ohm, +/- 1%, 100 mW, -55 to 155 degC, 0603 (1608 Metric)","R7.1, R7.2, R7.3, R7.4, R7.5, R7.6, R7.7, R7.8",8,22,Panasonic,ERJ-3EKF22R0V,Generic
+22,Resistor 0R +/- 5% 0402 100 mW,"Chip Resistor, 0 Ohm, 0.1 W, -55 to 155 degC, 0402 (1005 Metric)","R9, R10",2,0,Panasonic,ERJ-2GE0R00X,Generic
+29,SSR RELAY SPST-NO 2.5A 0-100V,"Solid State SPST-NO (1 Form A) 8-SIP, 4 Leads","SSR1.1, SSR1.2, SSR1.3, SSR1.4, SSR1.5, SSR1.6, SSR1.7, SSR1.8",8,,IXYS,CPC1916Y,Critical
+30,A6S-3102-H,SWITCH SLIDE DIP SPST 25MA 24V,SW1,1,,Omron,A6S-3102-H,Likely replaceable
+32,PS2911-1-F3-AX,OPTOISOLATOR 2.5KV TRANS 4-SMD,"U1.1, U1.2, U1.3, U1.4, U1.5, U1.6, U1.7, U1.8",8,,Renesas,PS2911-1-F3-AX,Critical
+33,PCA9555PW,"Remote 16-Bit I2C and SMBus I/O Expander with Interrupt Output and Configuration Registers, 2.3 to 5.5 V, -40 to 85 degC, 24-pin TSSOP (PW), Green (RoHS & no Sb/Br)",U2,1,,Texas Instruments,PCA9555PWR,Critical
+34,PCA9306DCTT,"Dual Bi-Directional I2C-Bus and SMBus Voltage Level-Translator, 0 to 5.5 V, -40 to 85 degC, 8-pin SM8 (DCT), Green (RoHS & no Sb/Br)",U3,1,,Texas Instruments,PCA9306DCTT,Critical
+35,SN74LVC2G02DCUT,"Dual 2-Input Positive-NOR Gate, DCU0008A, SMALL T&R",U4,1,,Texas Instruments,SN74LVC2G02DCUT,Critical
+36,MCP6004-I/ST,None,U5,1,,Microchip,MCP6004-I/ST,Critical
+37,ACS724LLCTR-05AU-T,"Hall-effect current sensor, 0->5A",U6,1,,Allegro MicroSystems,ACS724LLCTR-05AU-T,Critical
+39,43045-0225,Conn Power HDR 2 POS Solder ST Thru-Hole 2 Terminal 1 Port Micro-Fit 3.0™ Frame,"X1.1, X1.2, X1.3, X1.4, X1.5, X1.6, X1.7, X1.8",8,,Molex,43045-0225,Connector
+41,0154004.DR,FUSE BRD MNT 4A 125VAC/VDC 2SMD,"XF1, XF2",2,,Littelfuse,0154004.DR,Likely replaceable

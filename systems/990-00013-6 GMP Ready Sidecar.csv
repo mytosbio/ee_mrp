@@ -1,0 +1,11 @@
+Part Number,Name,Quantity
+950-00015-3,StepperController,6
+950-00035-1,TemperatureHumiditySensor,3
+950-00036-1,I2cSplitter,2
+950-00040-1,DosingSensor,3
+950-00043-1,IsolatedOmniController,1
+950-00044-1,IsolatedPowerDistribution,1
+950-00045-1,IsolatedPinchValveController,6
+950-00046-1,IsolatedFluidExpander,1
+950-00050-2,Signalling Pi Header,1
+950-00051-1,TMC5130Hopper,3

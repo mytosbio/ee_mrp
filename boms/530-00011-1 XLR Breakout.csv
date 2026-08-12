@@ -1,0 +1,6 @@
+Line #,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacturer Part Number,Status
+1,172064-1002,"5.70mm Pitch, Mega-Fit Right-Angle Header, 2 Circuits, 0.76µm Gold (Au) Plating, UL 94 V-0, Glow-Wire Capable, Tray",X1,1,Molex,172064-1002,Connector
+2,43045-0602,Connector Wire to Board Header 6 Position 3mm Solder Right Angle Thru-Hole Tray,J5,1,Molex,43045-0602,Connector
+3,NC5FAH,,J3,1,Neutrik,NC5FAH,Connector
+4,ESHF-105-01-X-D-TH,Connector Header Through Hole 10 position 0.050 Inch (1.27mm).,"J2, J4",2,Samtec,ESHF-105-01-L-D-TH,Connector
+5,NC5MAH,,"J1, J6",2,Neutrik,NC5MAH,Connector

@@ -1,0 +1,52 @@
+Line #,Name,Description,Designator,Quantity,Manufacturer,Manufacturer Part Number,Status
+,CMI-1295-24TH,"Buzzers Indicator, Internally Driven Magnetic 24 V 30mA 2.4kHz 85dB @ 24V, 10cm Through Hole PC Pins",BUZZ1,1,Same Sky,CMI-1295-24TH,Critical
+1,CGA3E2X7R1H104K080AA,"Multilayer Ceramic Capacitor, 0.1 uF, 50 V, ± 10%, X7R, 0603 [1608 Metric]","C1, C2, C3, C4, C5, C6, C10, C13, C16.1, C16.2, C19, C20, C21, C22, C23",15,TDK,CGA3E2X7R1H104K080AA,Generic
+3,CAP,"Capacitor, Generic","C11, C12",2,Murata,GRM32ER71A476ME15L,Generic
+4,CAP,"Capacitor, Generic",C14,1,Murata,GRM188R71A225KE15D,Generic
+5,CAP,"Capacitor, Generic",C15,1,KEMET,C0603C562K4RACTU,Generic
+6,Capacitor 4.7µF +/-40% 25V 0805,"Chip Capacitor, 4.7µF +/-40%, 25V, 0805, Thickness 1.45 mm","C17.1, C17.2",2,KYOCERA AVX,08053D475MAT2A,Generic
+7,Capacitor 10nF +/-20% 50V 0402,"Chip Capacitor, 10nF +/-20%, 50V, 0402, Thickness 0.6 mm","C18.1, C18.2",2,Yageo Group,CC0402KRX7R9BB103,Generic
+2,CAP,"Capacitor, Generic","C7, C8, C9",3,Murata,GRM31CR71H475KA12L,Generic
+8,D1213A-04S-7,TVS DIODE 3.3V 10V SOT363,"D1, D2",2,Diodes Inc.,D1213A-04S-7,Likely replaceable
+11,LED_0603_RED,Red LED 0603,"D11, D12, D13, D14",4,Lite-On,LTST-C191KRKT,Likely replaceable
+12,B5819WS-TP,DIODE SCHOTTKY 40V 1A SOD323,"D15, D17",2,MCC,B5819WS-TP,Likely replaceable
+13,LED_0603_GREEN,Green LED 0603,"D18, D22",2,Lite-On,LTST-C194TGKT,Likely replaceable
+14,DIODE_TVS_24V_SMAJ24A-E3/5A,"TVS, 24V, SMA","D19, D23",2,Vishay,SMAJ24A-E3/5A,Likely replaceable
+15,LED_0603_GREEN,Green LED 0603,D20,1,Lite-On,LTST-C194TGKT,Likely replaceable
+16,10V 200mW,Zener Diode 10V,D21,1,onsemi,MM3Z10VB,Likely replaceable
+9,ESD9X3.3ST5G,TVS DIODE 3.3VWM 10.4VC SOD923,"D3, D4, D5, D10, D16",5,onsemi,ESD9X3.3ST5G,Likely replaceable
+10,150060YS75000,"Led, Yellow, 590 Nm, 2 V, 30 Ma, 120 Mcd Rohs Compliant: Yes","D6, D7, D8, D9",4,Wurth Elektronik,150060YS75000,Likely replaceable
+17,6.3A,"Fuse on holder, 6.3A 125VAC",F1,1,Littelfuse,015406.3DR,Likely replaceable
+18,BLM31KN121SN1L,FERRITE BEAD 120 OHM 1206 1LN,FB1,1,Murata,BLM31KN121SN1L,Likely replaceable
+,BLM31KN121SN1L,Ferrite Beads Multi-Layer 120Ohm 25% 100MHz 6A 0.009Ohm DCR 1206 Automotive T/R,"FB2, FB3, FB4, FB5, FB6",5,Murata,BLM31KN121SN1L,Likely replaceable
+,ACM7060-301-2PL-TL01,CMC 5A 2LN 300 OHM SMD,FL1,1,TDK,ACM7060-301-2PL-TL01,Likely replaceable
+19,43650-0212,Conn; Rect; Header; 2 Cir; PCB; MicroFit 3.0; Rt Angle; Single; SMT; w/Tab; Tin,"J1, J3",2,Molex,43650-0212,Connector
+20,43650-0412,"Conn, Rect, Header, 4 Cir, PCB, MicroFit 3.0, Rt Angle, Single, SMT, w/Tab, Tin",J2,1,Molex,43650-0412,Connector
+21,SHF-105-01-L-D-SM,CONN HEADER SMD 10POS 1.27MM,"J4, J5",2,Samtec,SHF-105-01-L-D-SM,Connector
+,CONN_40P_ESW-120-44-T-D,Samtec 40P Header RCPT 0.1 TH,J6,1,Samtec,ESW-120-44-T-D,Connector
+,RELAY_DPDT_2961192,Relay DPDT (2 From C) 24VDC Coil TH,K1,1,Phoenix Contact,2961192,Critical
+23,IND,"Inductor, Generic",L1,1,Coilcraft,XEL6060-822MEC,Likely replaceable
+,TSM-108-01-L-DV,"0.025"" SQ Post Header, Surface Mount, Vertical, -55 to 125 degC, 2.54 mm Pitch, 16-Pin, Male, RoHS",P1,1,Samtec,TSM-108-01-L-DV,Connector
+,DMN53D0L-13,Trans Mosfet N-ch 50V 0.5A 3-PIN SOT-23 T/r,"Q1, Q4, Q5, Q6, Q7",5,Diodes Inc.,DMN53D0L-13,Likely replaceable
+25,"40V, -16A, 1.4W","MOSFET, P Channel, 40V, -16A",Q2,1,ROHM,RS3G160ATTB1,Likely replaceable
+26,MMBT3906TT1G,"General Purpose Transistor, PNP Silicon, 3-Pin SC-75, Pb-Free, Tape and Reel","Q3.1, Q3.2",2,onsemi,MMBT3906TT1G,Likely replaceable
+27,Resistor 10k +/-1% 0402 100 mW,"Chip Resistor, 10 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0402 (1005 Metric)","R1, R2, R30",3,Panasonic,ERJ-2RKF1002X,Generic
+29,RC0603FR-0722RL,"Chip Resistor, 22 Ohm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Reel","R11, R12",2,Yageo Group,RC0603FR-0722RL,Generic
+30,ERJ-3EKF3300V,"Chip Resistor, 330 Ohm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Reel","R13, R14, R15, R16, R17, R18, R19, R20, R40, R41, R44, R45",12,Panasonic,ERJ-3EKF3300V,Generic
+31,Resistor 10k +/-1% 0402 63 mW,"Chip Resistor, 10 KOhm, +/- 1%, 63 mW, -55 to 155 degC, 0402 (1005 Metric)","R21, R27, R37.1, R37.2, R38.1, R38.2, R39.1, R39.2, R42, R43, R46, R47",12,Yageo Group,RC0402FR-0710KL,Generic
+,Resistor 33k +/-5% 0402 63 mW,"Chip Resistor, 33 KOhm, +/- 5%, 0.063 W, -55 to 155 degC, 0402 (1005 Metric)",R22,1,Yageo Group,RC0402JR-0733KL,Generic
+33,ERJ-8CWFR010V,Res Thick Film 1206 0.01 Ohm 1% 1W +/-50ppm/ßC Pad SMD Automotive T/R,"R23, R25, R28, R29, R33",5,Panasonic,ERJ8CWFR010V,Generic
+,Resistor 4k7 +/-1% 0402 100 mW,"Chip Resistor, 4.7 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0402 (1005 Metric)",R24,1,Panasonic,ERJ-2RKF4701X,Generic
+32,100R 1% 0603(1608),100R 0.1W 1% 0603 (1608 Metric) SMD,R26,1,Vishay,CRCW0603100RFKEB,Generic
+28,Resistor 22R +/-1% 0603 100 mW,"Chip Resistor, 22 Ohm, +/- 1%, 100 mW, -55 to 155 degC, 0603 (1608 Metric)","R3, R4, R5, R6, R7, R8, R9, R10",8,Yageo Group,RC0603FR-0722RL,Generic
+34,RES,"Resistor, Generic",R31,1,Yageo Group,RC0603FR-0710KL,Generic
+35,RES,"Resistor, Generic",R32,1,Yageo Group,RC0805FR-072K8L,Generic
+36,RES,"Resistor, Generic",R34,1,TE Connectivity,CPF0603B133KE1,Generic
+37,RES,"Resistor, Generic",R35,1,Yageo Group,RC0603FR-0751K1L,Generic
+38,RES,"Resistor, Generic",R36,1,Panasonic,ERA3AEB2942V,Generic
+,5016,"Test Point, 1-Pin SMT, RoHS, Tape and Reel",TP7,1,Keystone,5016,Generic
+39,IC_AMP_AD8040ARZ-REEL7,IC OPAMP GP 4 CIRCUIT 14SOIC,"U1, U2",2,Analog Devices,AD8040ARZ-REEL7,Critical
+40,ITS4141N,ITS4141N Series 45 V 1.4 A 200 mOhms Smart High-Side Power Switch - SOT-223-4,U3,1,Infineon,ITS4141NHUMA1,Critical
+41,IC_BUCK_ADJ_MAX17634CATP+,IC REG BUCK ADJ 4.25A,U4,1,Analog Devices,MAX17634CATP+,Critical
+42,NE555DR,IC OSC SGL TIMER 100KHZ 8-SOIC,"U5.1, U5.2",2,Texas Instruments,NE555DR,Critical
+,SMS24T1G,SMS24T Series 24 V 350 W Uni-Directional Quad TVS Array - SC-74,U6,1,onsemi,SMS24T1G,Critical

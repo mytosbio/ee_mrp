@@ -1,0 +1,33 @@
+Line #,Name,Description,Designator,Quantity,Manufacturer,Manufacturer Part Number,Status
+2,CGA4C2C0G1H103J060AA,Cap Ceramic 10nF 50V C0G 5% Pad SMD 0805 +125°C Automotive T/R,C1,1,TDK,CGA4C2C0G1H103J060AA,Generic
+3,35SVPF82M,CAP ALUM POLY 82UF 20% 35V SMD,C2,1,Panasonic,35SVPF82M,Generic
+4,CGA2B3X7R1H104K050BB,Cap Ceramic 100nF 50V X7R 10% Pad SMD 0402 +125°C Automotive T/R,C3,1,TDK,CGA2B3X7R1H104K050BB,Generic
+5,C1210C106K5RACTU,CAP CER 10UF 50V X7R 1210,C4,1,KEMET,C1210C106K5RACTU,Generic
+6,16SVP330M,"Conductive Polymer Aluminum Solid Capacitor, 330 uF, +/- 20%, 16 V, -55 to 105 degC, 2-Pin SMD (F12), RoHS, Tape and Reel",C5,1,Panasonic,16SVP330M,Generic
+7,MM3Z10VT1G,"Zener Voltage Regulator, 300 mW, 2-Pin SOD-323, Pb-Free, Tape and Reel",D1,1,ON Semiconductor,MM3Z10VT1G,Likely replaceable
+8,STPS20M100SG-TR,DIODE SCHOTTKY 100V 20A D2PAK,D2,1,STMicroelectronics,STPS20M100SG-TR,Likely replaceable
+,APT1608SYCK,APT1608SYCK Yellow LED; 590 nm 1608 (0603) Clear; Rectangle Lens SMD package,"DS1.1, DS1.2, DS1.3, DS1.4",4,Kingbright,APT1608SYCK,Likely replaceable
+9,APT1608SGC,"Super Bright Green LED, 62.5 mW, 25 mA, -40 to 85 degC, 2-Pin SMD, RoHS, Tape and Reel","DS2, DS4, DS5.1, DS5.2, DS5.3, DS5.4, DS6.1, DS6.2, DS6.3, DS6.4",10,Kingbright,APT1608SGC,Likely replaceable
+,LTST-C190KFKT,"LED Uni-Color Orange, 75 mW, 30 mA, -35 to 85 degC, 2-Pin SMD, RoHS, Tape and Reel",DS3,1,Vishay Lite-On,LTST-C190KFKT,Likely replaceable
+10,Very fast acting 6.3A fuse,"Fuse, Surface Mount with Clip/Holder, 6.3 A, Very Fast Acting, 125 VAC, 125 VDC, 9.73mm x 5.03mm",F1,1,Littelfuse,015406.3DR,Likely replaceable
+11,0154004.DR,FUSE BRD MNT 4A 125VAC/VDC 2SMD,"F2.1, F2.2, F2.3, F2.4",4,Littelfuse,0154004.DR,Likely replaceable
+12,0154001.DR,"Very Fast-Acting Fuse, 1 A, -55 to 125 degC, 2-Pin SMD, RoHS, Tape and Reel","F3.1, F3.2, F3.3, F3.4",4,Littelfuse,0154001.DR,Likely replaceable
+13,SSW-103-01-G-D,"SQ Post Socket, Through-hole, Vertical, -55 to 125 degC, 2.54 mm Pitch, 6-Pin, Female, RoHS",J1,1,Samtec,SSW-103-01-G-D,Connector
+14,SHF-105-01-L-D-SM,CONN HEADER SMD 10POS 1.27MM,J2,1,Samtec,SHF-105-01-L-D-SM,Connector
+15,742792731,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 100 Ohm","L1.1, L1.2, L1.3, L1.4",4,Wurth Electronics,742792731,Likely replaceable
+16,74279226101,"SMD-EMI Multilayer Power Suppression Bead WE-MPSB, Z=100 Ohms",L2,1,Wurth Electronics,74279226101,Likely replaceable
+17,7443551111,"SMD Flat Wire High Current Inductor WE-HCI, L=11.30 µH",L3,1,Wurth Electronics,7443551111,Likely replaceable
+19,TSW-102-26-T-S,"0.025"" SQ Post Header, Through-hole, Vertical, -55 to 105 degC, 2.54 mm Pitch, 2-Pin, Male, RoHS","P1, P2",2,Samtec,TSW-102-26-T-S,Connector
+20,FDD4141,MOSFET P-CH 40V 10.8A DPAK,Q1,1,ON Semiconductor / Fairchild,FDD4141,Likely replaceable
+21,BSS138LT1G,"Power MOSFET, 200 mA, 50 V, N-Channel, 3-Pin SOT-23, Pb-Free, Tape and Reel",Q2,1,ON Semiconductor,BSS138LT1G,Likely replaceable
+,CRCW0603100RFKEA,"Chip Resistor, 100 Ohm, +/- 1%, 100 mW,-55 to 155 degC, 0603 (1608 Metric), RoHS, Tape and Ree","R1.1, R1.2, R1.3, R1.4, R8",5,Vishay Dale,CRCW0603100RFKEA,Generic
+27,620R 1% 0603(1608),620R 0.1W 1% 0603 (1608 Metric) SMD,"R11.1, R11.2, R11.3, R11.4",4,Panasonic,ERJ-3EKF6200V,Generic
+,Resistor 1k +/-5% 0402 63 mW,"Chip Resistor, 1 KOhm, +/- 5%, 0.063 W, -55 to 155 degC, 0402 (1005 Metric)","R2.1, R2.2, R2.3, R2.4",4,Yageo,RC0402JR-071KL,Generic
+22,CRCW12060000Z0EAHP,,R3,1,Vishay Dale,CRCW12060000Z0EAHP,Generic
+23,4K7 1% 0603(1608),4K7 0.1W 1% 0603 (1608 Metric) SMD,"R4, R5, R10.1, R10.2, R10.3, R10.4",6,Panasonic,ERJ-3EKF4701V,Generic
+24,2K4 1% 0603(1608),2K4 0.1W 1% 0603 (1608 Metric) SMD,R6,1,Bourns,CR0603-FX-2401ELF,Generic
+25,150R 5% 0603(1608),150R 0.1W 5% 0603 (1608 Metric) SMD,R7,1,Vishay Dale,CRCW0603150RJNEA,Generic
+26,10K 1% 0603(1608),10K 0.1W 1% 0603 (1608 Metric) SMD,R9,1,Vishay Dale,CRCW060310K0FKEC,Generic
+29,LM2678SD-5.0/NOPB,"SIMPLE SWITCHER® High Efficiency 5A Step-Down Voltage Regulator, 14-pin LLP, Pb-Free",U1,1,TI National Semiconductor,LM2678SD-5.0/NOPB,Critical
+,172064-1002,"5.70mm Pitch, Mega-Fit Right-Angle Header, 2 Circuits, 0.76µm Gold (Au) Plating, UL 94 V-0, Glow-Wire Capable, Tray",X1,1,Molex,172064-1002,Connector
+31,Molex 6 pin SMD connector,"Pin Header, Power, 3 mm, 2 Rows, 6 Contacts, Surface Mount Straight, Micro-Fit 3.0 43045 Series","X2.1, X2.2, X2.3, X2.4",4,Molex,430450610,Connector

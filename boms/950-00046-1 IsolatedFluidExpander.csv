@@ -1,0 +1,35 @@
+Line # ,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacturer Part Number,Status
+1,Capacitor 1µF +/-40% 50V 0603,"Chip Capacitor, 1µF +/-40%, 50V, 0603, Thickness 1 mm","C1.1, C1.2, C1.3, C1.4",4,TDK,C1608X5R1H105M,Generic
+2,Capacitor 100 nF +/-10% 50 V 0603,"Chip Capacitor, 100 nF, +/- 10%, 50 V, 0603 (1608 Metric)","C2.1, C2.2, C2.3, C2.4, C3.1, C3.2, C3.3, C3.4, C4, C5, C6, C7, C8",13,Kyocera AVX,06035C104KAT2A,Generic
+3,SMF26A,"ESD Diode, 26 V Standoff, 42 V Clamp, ±30 kV Protection, 100 pF, SOD-123FL","D1.1, D1.2, D1.3, D1.4, D10",5,Littelfuse,SMF26A,Likely Replaceable
+4,ESD9X3.3ST5G,TVS DIODE 3.3VWM 10.4VC SOD923,"D2.1, D2.2, D2.3, D2.4, D3.1, D3.2, D3.3, D3.4, D4, D5, D8, D9",12,ON Semiconductor,ESD9X3.3ST5G,Likely Replaceable
+5,DIODE_TVS_24V_SMAJ24A-E3/5A,"TVS, 24V, SMA",D6,1,Vishay Semiconductors,SMAJ24A-E3/5A,Likely Replaceable
+6,SMAJ5.0A-13-F,TVS DIODE 5V 9.2V SMA,D7,1,Diodes,SMAJ5.0A-13-F,Likely Replaceable
+7,SESD0402X1UN-0030-088,TVS Diode (Uni-directional),"D11, D12, D13",3,,,Likely Replaceable
+8,APT1608SYCK,APT1608SYCK Yellow LED; 590 nm 1608 (0603) Clear; Rectangle Lens SMD package,"DS1, DS2",2,Kingbright,APT1608SYCK,Generic
+9,0154.500DRT,Fuse Chip Slow Blow Acting 0.5A 125V SMD Solder Pad 9.73 X 5.03 X 3.81mm T/R CSA/PSE/UL,"F1, F2",2,Littelfuse,0154.500DRT,Likely Replaceable
+10,0154002.DR,Fuse Chip Very Fast Acting 2A 125V SMD Solder Pad 9.73 X 5.03 X 3.81mm T/R PSE/UL,F3,1,Littelfuse,0154002.DR,Likely Replaceable
+11,BLM31KN121SN1L,Ferrite Beads Multi-Layer 120Ohm 25% 100MHz 6A 0.009Ohm DCR 1206 Automotive T/R,"FB1, FB2",2,Murata,BLM31KN121SN1L,Generic
+12,THVD1406DR,"RS-458 Reansceiver, Half-Duplex, 3.3 to 5.0 V, SOIC-8",IC1,1,TI,THVD1406DR,Critical
+13,43650-0417,Connector Header 4 Position 3 mm Solder Straight Thru-Hole 4 Terminal 1 Port Micro-Fit 3.0™,"J1.1, J1.2, J1.3, J1.4",4,Molex,43650-0417,Connector
+14,RJHSE-5381,"Jack Modular Connector 8p8c (RJ45, Ethernet) 90Â° Angle (Right) Shielded, EMI Finger -",J2,1,Amphenol,RJHSE-5381,Connector
+15,742792731,"Ferrite Bead, 90 mΩ DC, 100 Ω @ 100 MHz ± 25%, 1200 mA, 0402 [1005 Metric]","L1.1, L1.2, L1.3, L1.4, L2.1, L2.2, L2.3, L2.4, L3.1, L3.2, L3.3, L3.4, L4.1, L4.2, L4.3, L4.4, L5, L6, L7, L8, L9",21,,,Generic
+16,742792731,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 100 Ohm",L10,1,Wurth Electronics,742792731,Generic
+17,B82787C0513H002,CMC 51UH 200MA 2LN SMD AEC-Q200,L11,1,,,Likely Replaceable
+19,70246-3001,Conn Shrouded Header (4 Sides) HDR 30 POS 2.54mm Solder ST Top Entry Thru-Hole C-Grid® Tray,P1,1,Molex,70246-3001,Connector
+20,TSW-102-26-T-S,.100 Terminal Strip Assembly 550 VAC 7 Amp Through Hole Unshrouded Header 5.08mm,P2,1,Samtec,TSW-102-26-T-S,Connector
+21,DMG1012T-7,"Transistor MOSFET NTR4003NT1G, SOT23, ON Semi","Q1, Q2, Q3, Q4",4,Diodes,DMG1012T-7,Likely Replaceable
+22,CRCW04026K98FKED,Res Thick Film 0402 6.98K Ohm 1% 1/16W ±100ppm/°C Molded SMD SMD Paper T/R,"R1.1, R1.2, R1.3, R1.4, R4.1, R4.2, R4.3, R4.4",8,Vishay,CRCW04026K98FKED,Generic
+23,100R 1% 0603(1608),100R 0.1W 1% 0603 (1608 Metric)  SMD,"R2.1, R2.2, R2.3, R2.4, R5.1, R5.2, R5.3, R5.4, R15, R22, R23, R30, R32",13,Bourns,CR0603-FX-1000ELF,Generic
+24,1K 1% 0603(1608),1K 0.1W 1% 0603 (1608 Metric)  SMD,"R3.1, R3.2, R3.3, R3.4, R6.1, R6.2, R6.3, R6.4",8,Bourns,CR0603-FX-1001ELF,Generic
+25,Resistor 100k +/-1% 0603 100 mW,"Chip Resistor, 100 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R7, R11",2,Vishay,CRCW0603-100KFKEA,Generic
+26,Resistor 44K2 +/-1 % 0402 63 mW,"Chip Resistor, 44,2 kOhms, +/-1 %, 63 mW, -55 to 155 degC, 0402",R8,1,Panasonic,ERJ-2RKF4422X,Generic
+27,Resistor 6K2  +/-5 % 0402 63 mW,"Chip Resistor, 6,2 kOhms, +/-5 %, 63 mW, -55 to 155 degC, 0402",R9,1,Vishay,CRCW04026K20JNEE,Generic
+28,10K 1% 0603(1608),10K 0.1W 1% 0603 (1608 Metric)  SMD,"R10, R13, R14, R20, R21, R27, R29, R31",8,Bourns,CR0603-FX-1002ELF,Generic
+29,Resistor 12K  +/-1 % 0402 63 mW,"Chip Resistor, 12 kOhms, +/-1 %, 63 mW, -55 to 155 degC, 0402",R12,1,,,Generic
+30,Resistor 10K  +/-1 % 0402 63 mW,"Chip Resistor, 10 kOhms, +/-1 %, 63 mW, -55 to 125 degC, 0402",R16,1,,,Generic
+31,Resistor 11k +/-1% 0603 100 mW,"Chip Resistor, 11 KOhm, +/-1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R17,1,,,Generic
+32,Resistor 1.5k +/-1% 0603 100 mW,"Chip Resistor, 1.5 KOhm, +/-1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R18,1,,,Generic
+33,Resistor 1K +/-5% 0805 125 mW,"Chip Resistor, 1 kOhms, +/-5%, 125 mW, -55 to 155 degC, 0805",R19,1,,,Generic
+34,Resistor 1k +/-1% 0402 63 mW,"Chip Resistor, 1 KOhm, +/- 1%, 63 mW, -55 to 155 degC, 0402 (1005 Metric)",R33,1,,,Generic
+35,Resistor 2K +/-5 % 0402 63 mW,"Chip Resistor, 2 kOhms, +/-5 %, 63 mW, -55 to 155 degC, 0402",R34,1,,,Generic

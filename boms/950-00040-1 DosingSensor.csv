@@ -1,0 +1,14 @@
+Line #,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacturer Part Number,Status
+1,Capacitor 22nF +/-20% 10V 0402,"Chip Capacitor, 22nF +/-20%, 10V, 0402, Thickness 0.6 mm","C1_U_Transceiver_Pair_0, C1_U_Transceiver_Pair_1, C1_U_Transceiver_Pair_2, C1_U_Transceiver_Pair_3",4,Yageo Group,C0402C223K8PACTU,Generic
+2,Capacitor 1µF +/-20% 10V 0402,"Chip Capacitor, 1µF +/-20%, 10V, 0402, Thickness 0.6 mm","C2, C3, C4",3,Yageo Group,CC0402KRX5R6BB105,Generic
+3,Capacitor 10 uF +/- 10% 16 V 0805,"Chip Capacitor, 10 uF, +/- 10%, 16 V, 0805 (2012 Metric)",C5,1,Murata,GRM21BR61C106KE15L,Generic
+4,APA3010F3C-GX,EMITTER IR 940NM 50MA SMD,"D1_U_Transceiver_Pair_0, D1_U_Transceiver_Pair_1, D1_U_Transceiver_Pair_2, D1_U_Transceiver_Pair_3",4,Kingbright,APA3010F3C-GX,Critical
+5,SESD0402X1UN-0030-088,TVS Diode (Uni-directional),D2,1,,,Likely Replaceable
+6,43045-0406,CONN HEADER SMD R/A 4POS 3MM,J1,1,Molex,43045-0406,Conector
+7,CMP-0220-00106-1,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 100 Ohm","L1, L2",2,Wurth Elektronik,742792731,Generic
+8,QBLP595-IG,"Chip LED 0402, Green, 0.02 A, 3.1 to 3.7 V, -40 to 80 degC, 2-Pin SMD, RoHS, Tape and Reel",LED1,1,QT Brightek,QBLP595-IG,Generic
+9,APA3010P3BT-GX,3 x 1 mm 30 V Right Angle Side View Surface Mount Phototransistor,"Q1_U_Transceiver_Pair_0, Q1_U_Transceiver_Pair_1, Q1_U_Transceiver_Pair_2, Q1_U_Transceiver_Pair_3",4,Kingbright,APA3010P3BT-GX,Critical
+10,DMG1012T-7,"Transistor MOSFET NTR4003NT1G, SOT23, ON Semi","Q2_U_Transceiver_Pair_0, Q2_U_Transceiver_Pair_1, Q2_U_Transceiver_Pair_2, Q2_U_Transceiver_Pair_3",4,Diodes Inc.,DMG1012T-7,Likely Replaceable
+11,Resistor 220R +/-1% 0402 63 mW,"Chip Resistor, 220 Ohm, +/- 1%, 63 mW, -55 to 155 degC, 0402 (1005 Metric)","R1_U_Transceiver_Pair_0, R1_U_Transceiver_Pair_1, R1_U_Transceiver_Pair_2, R1_U_Transceiver_Pair_3, R3_U_Transceiver_Pair_0, R3_U_Transceiver_Pair_1, R3_U_Transceiver_Pair_2, R3_U_Transceiver_Pair_3, R6",9,,,Generic
+12,Resistor 10K  +/-1 % 0402 63 mW,"Chip Resistor, 10 kOhms, +/-1 %, 63 mW, -55 to 125 degC, 0402","R2_U_Transceiver_Pair_0, R2_U_Transceiver_Pair_1, R2_U_Transceiver_Pair_2, R2_U_Transceiver_Pair_3, R7, R8",6,Yageo Group,RC0402FR-0710KL,Generic
+13,TLA2528IRTER,SMALL 8-CHANNEL 12-BIT ANALOG-TO,U1,1,Texas Instruments,TLA2528IRTER,Critical

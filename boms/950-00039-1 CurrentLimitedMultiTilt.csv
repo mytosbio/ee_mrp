@@ -1,0 +1,39 @@
+Line #,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacturer Part Number,Status
+1,Capacitor 100 nF +/-10% 50 V 0805,"Chip Capacitor, 100 nF, +/- 10%, 50 V, 0805 (2012 Metric)","C1.1, C1.2, C1.3, C2.1, C2.2, C2.3, C3.1, C3.2, C3.3, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23",23,Yageo Group,CC0805KRX7R9BB104,Generic
+2,Capacitor 22nF +/-20% 50V 0402,"Chip Capacitor, 22nF +/-20%, 50V, 0402, Thickness 0.6 mm","C4.1, C4.2, C4.3",3,,,Generic
+3,Capacitor 470nF +/-40% 10V 0402,"Chip Capacitor, 470nF +/-40%, 10V, 0402, Thickness 0.6 mm","C5.1, C5.2, C5.3",3,KYOCERA AVX,0402ZD474MAT2A,Generic
+4,Capacitor 1 uF +/- 10% 25 V 0603,"Chip Capacitor, 1 uF, +/- 10%, 25 V, 0603 (1608 Metric)","C6, C7, C8, C29.1, C29.2, C29.3",6,Yageo Group,CC0603KRX7R8BB105,Generic
+5,EEEFK1E101XP,"Aluminum Electrolytic Capacitor, 100 uF, +/- 20%, 25 V, 2-Pin SMD (Size Code D8), -55 to 105 degC, RoHS, Tape and Reel",C9,1,Panasonic,EEEFK1E101XP,Generic
+6,Capacitor 100 nF +/-10% 50 V 0603,"Chip Capacitor, 100 nF, +/- 10%, 50 V, 0603 (1608 Metric)","C24, C25, C27.1, C27.2, C27.3, C28.1, C28.2, C28.3",8,Yageo Group,CC0603KRX7R9BB104,Generic
+7,Capacitor 220nF +/-10% 16V 0402,"Chip Capacitor, 220nF +/-10%, 16V, 0402, Thickness 0.6 mm","C26.1, C26.2, C26.3",3,Murata,GRM155R71C224KA12D,Generic
+8,SMAJ14CA-E3/61,SMAJ Series 400 W 14 V Bi-Directional SMT TRANSZORB® TVS Diode - DO-214AC,"D1.1, D1.2, D1.3",3,Vishay,SMAJ14CA-E3/61,Likely Replaceable
+9,SMF15AT1G,"200 W Transient Voltage Suppressor, 2-Pin SOD-123FL, Pb-Free, Tape and Reel","D2.1, D2.2, D2.3",3,onsemi,SMF15AT1G,Likely Replaceable
+10,B540C-13-F,"Rectifier Diode, Schottky, 1 Phase, 1 Element, 5A, 40V V(RRM), Silicon",D3,1,Diodes Inc.,B540C-13-F,Likely Replaceable
+11,DIODE_TVS_24V_SMAJ24A-E3/5A,"TVS, 24V, SMA",D4,1,Vishay,SMAJ24A-E3/5A,Likely Replaceable
+12,SMAJ5.0A-13-F,TVS DIODE 5V 9.2V SMA,D5,1,Diodes Inc.,SMAJ5.0A-13-F,Likely Replaceable
+13,ESD9X3.3ST5G,TVS DIODE 3.3VWM 10.4VC SOD923,"D6, D7",2,onsemi,ESD9X3.3ST5G,Likely Replaceable
+14,0154004.DR,FUSE BRD MNT 4A 125VAC/VDC 2SMD,F1,1,Littelfuse,0154004.DR,Likely Replaceable
+15,0154.250DR,FUSE BOARD MNT 250MA 125VAC/VDC,F2,1,Littelfuse,0154.250DR,Likely Replaceable
+16,ACM7060-301-2PL-TL01,ACM Series 2824 300 Ohm 5 A 10 mOhm DCR 50 V SMT Common Mode Filter,"FL1, FL2",2,TDK,ACM7060-301-2PL-TL01,Likely Replaceable
+17,43650-0204,CONN HEADER R/A 2POS 3MM,"J1.1, J1.2, J1.3",3,Molex,43650-0204,Connector
+18,43045-0802,"Conn, Rect/PCB, Header, Rt Angle, 2 Row, 8 Pos, Micro-Fit 3.0, Gold, SMT, GlowWire Comp.",J2,1,Molex,43045-0802,Connector
+19,43045-0602,Connector Wire to Board Header 6 Position 3mm Solder Right Angle Thru-Hole Tray,J3,1,Molex,43045-0602,Connector
+20,Molex - 6 pin - thru-hole - vertical,Conn Wire to Board HDR 6 POS 3mm Solder ST Thru-Hole Micro-Fit 3.0™ Tray,J4,1,Molex,43045-0627,Connector
+21,70246-3001,Conn Shrouded Header (4 Sides) HDR 30 POS 2.54mm Solder ST Top Entry Thru-Hole C-Grid® Tray,J5,1,Molex,70246-3001,Connector
+22,43045-0812,Header 2 Row Vertical Polarizing Peg 8 Pin Tin Plate SMT/Glow Wire Kinked Leads,J6,1,Molex,43045-0812,Connector
+23,742792114,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 50 Ohm","L1.1, L1.2, L1.3, L2.1, L2.2, L2.3",6,Wurth Elektronik,742792114,Generic
+24,742792731,"Ferrite Bead, 90 mΩ DC, 100 Ω @ 100 MHz ± 25%, 1200 mA, 0402 [1005 Metric]","L5, L6, L7, L8, L9, L10, L11, L12",8,Wurth Elektronik,742792731,Generic
+26,MMBT3904LT1G,"General Purpose Transistor, NPN Silicon, 40 V, 0.2 A, -55 to 150 degC, 3-Pin SOT23, RoHS, Tape and Reel",Q1,1,onsemi,MMBT3904LT1G,Likely Replaceable
+27,Resistor 1k +/-1% 0603 100 mW,"Chip Resistor, 1 KOhm, +/-1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)","R1.1, R1.2, R1.3",3,Yageo Group,RC0603FR-131KL,Generic
+28,ERJ-8ENF3902V,"SMD Chip Resistor, 39 kOhm, ± 1%, 250 mW, 1206 [3216 Metric], Thick Film, Precision",R2,1,Panasonic,ERJ-8ENF3902V,Generic
+29,RC0805FR-07100RL,"Chip Resistor, 100 Ohm, +/-1%, 0.125 W, -55 to 155 degC, 0805 (2012 Metric), RoHS, Tape and Reel",R3,1,Yageo Group,RC0805FR-07100RL,Generic
+30,10K 1% 0603(1608),10K 0.1W 1% 0603 (1608 Metric)  SMD,"R4, R5, R6, R7, R8, R9, R17, R18, R19",9,Vishay,CRCW060310K0FKEC,Generic
+31,Resistor 22R +/-1% 0603 100 mW,"Chip Resistor, 22 Ohm, +/- 1%, 100 mW, -55 to 155 degC, 0603 (1608 Metric)","R10, R11, R12, R13, R14, R15",6,Yageo Group,RC0603FR-0722RL,Generic
+32,Resistor 100k +/-1% 0603 100 mW,"Chip Resistor, 100 KOhm, +/- 1%, 0.1 W, -55 to 155 degC, 0603 (1608 Metric)",R16,1,Yageo Group,RC0603FR-13100KL,Generic
+33,DRV8256ERGER,"50-V, 8-A H-bridge motor drivers with integrated current sense and smart tune technology 24-VQFN -40 to 125","U1.1, U1.2, U1.3",3,Texas Instruments,DRV8256ERGER,Critical
+34,R-7312P,3A DC/DC-Converter 'INNOLINE' SIP12 reg; V. In: 15-28; V. Out: 12; mA. Out: 3000,U2,1,Recom Power,R-7312P,Critical
+35,MIC5504-3.3YM5-TR,LDO Regulator Pos 3.3V 0.3A Medical 5-Pin SOT-23 T/R / IC REG LDO 3.3V 0.3A SOT-23-5,U3,1,Microchip,MIC5504-3.3YM5-TR,Potentially Replaceable
+36,SN74LVC1G32DBVR,IC GATE OR 1CH 2-INP SOT23-5,U4,1,Texas Instruments,SN74LVC1G32DBVR,Potentially Replaceable
+37,SN74LVC1G02DBVR,IC GATE NOR 1CH 2-INP SOT23-5,U5,1,Texas Instruments,SN74LVC1G02DBVR,Potentially Replaceable
+38,CD40109BPWR,"CMOS Quad Low-to-High Voltage Level Shifter, 3 to 18 V, -55 to 125 degC, 16-Pin TSSOP (PW16), RoHS, Tape and Reel","U6, U9",2,Texas Instruments,CD40109BPWR,Critical
+39,CM1224-04SO,ESD Suppressor Diode Arrays ±8KV 6-Pin SOT-23 T/R,"U7, U8",2,onsemi,CM1224-04SO,Likely Replaceable

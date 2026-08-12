@@ -1,0 +1,11 @@
+Line #,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacturer Part Number,Status
+1,CC0402KRX5R8BB105,"Surface Mount Ceramic Multilayer Capacitor, 1.0uF, 10%, X5R, 25V, 0402",C1,1,Yageo,CC0402KRX5R8BB105,Generic
+2,CC0402KRX5R7BB104,"Surface Mount Ceramic Multilayer Capacitor, 100nF, 10%, X5R, 16V, 0402","C2, C3",2,Yageo,CC0402KRX5R7BB104,Generic
+3,SESD0402X1UN-0030-088,"ESD Diode, 7.0 V Standoff, 8.8 V Clamp, ±22 kV Protection, 0.3 pF, 0402 DFN","D1_U_I2C_Port_1, D1_U_I2C_Port_2",2,Yageo,SESD0402X1UN-0030-088,Generic
+4,43045-0400,CONN HEADER R/A 4POS 3MM,"J1_U_I2C_Port_1, J1_U_I2C_Port_2",2,Molex,43045-0400,Connector
+5,742792731,"Ferrite Bead, 90 mΩ DC, 100 Ω @ 100 MHz ± 25%, 1200 mA, 0402 [1005 Metric]","L1_U_I2C_Port_1, L1_U_I2C_Port_2, L2_U_I2C_Port_1, L2_U_I2C_Port_2",4,Littelfuse,742792731,Generic
+6,QBLP595-IG,"Chip LED 0402, Green, 0.02 A, 3.1 to 3.7 V, -40 to 80 degC, 2-Pin SMD, RoHS, Tape and Reel",LED1,1,QT-Brightek,QBLP595-IG,Likely Replaceable
+7,CRCW040210K0FKED,"SMD Chip Resistor, 10.0 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose","R1, R2, R3",3,Vishay,CRCW040210K0FKED,Generic
+8,CRCW0402100KFKED,"SMD Chip Resistor, 100 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose","R4, R5, R6, R7, R8",5,Vishay,CRCW0402100KFKED,Generic
+9,HDC3022DEJR,HDC3022DEJR 0.5% RH digital humidity sensor with permanent IP67 filter 8-WSON -40 to 125,U1,1,Texas Instruments,HDC3022DEJR,Critical
+10,MCP9808-E/MS,"0.5 degC Maximum Accuracy Digital Temperature Sensor, 2.7 to 5.5 V, -40 to 125 degC, 8-Pin MSOP, Pb-Free, Tube",U2,1,Microchip,MCP9808-E/MS,Critical
