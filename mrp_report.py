@@ -26,6 +26,7 @@ from pathlib import Path
 
 import digikey_client
 import mouser_client
+import slack_client
 
 # Stays under Mouser's per-minute rate limit (their retry-after cooldown is
 # a much costlier fallback if we blow through it instead).
@@ -287,6 +288,30 @@ def write_shortage_report(totals, stock_providers, path):
         writer.writerows(rows)
     print(f"Wrote {len(rows)} shortage line(s) to {path.name}")
 
+    return rows
+
+
+def notify_slack(shortage_rows, parts_checked):
+    if not slack_client.credentials_present():
+        print("  NOTE: SLACK_BOT_TOKEN / SLACK_CHANNEL not set; skipping Slack notification.")
+        return
+
+    if not shortage_rows:
+        message = f"MRP Stock Shortage Report: no shortages -- {parts_checked} part(s) checked against the 6-month forecast."
+    else:
+        lines = [f"MRP Stock Shortage Report: {len(shortage_rows)} part(s) short of the 6-month forecast"]
+        for category, manufacturer, mpn, qty, available, shortfall in shortage_rows:
+            lines.append(f"- [{category}] {manufacturer} {mpn}: need {qty}, have {available} (short {shortfall})")
+        message = "\n".join(lines)
+
+    try:
+        slack_client.post_message(message)
+    except slack_client.SlackError as exc:
+        print(f"  WARNING: Slack notification failed: {exc}")
+        return
+
+    print("  Posted shortage summary to Slack.")
+
 
 def main():
     if not FORECAST_FILE.exists():
@@ -310,7 +335,10 @@ def main():
     for bucket, path in REPORTS.items():
         write_report(bucket, totals, path, stock_providers)
 
-    write_shortage_report(totals, stock_providers, SHORTAGE_REPORT_FILE)
+    shortage_rows = write_shortage_report(totals, stock_providers, SHORTAGE_REPORT_FILE)
+
+    parts_checked = len({key for bucket_totals in totals.values() for key in bucket_totals})
+    notify_slack(shortage_rows, parts_checked)
 
     if missing_ident:
         print(f"\n{len(missing_ident)} matching line(s) had a blank Manufacturer and/or MPN (included with blank fields):")
