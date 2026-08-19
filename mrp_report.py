@@ -348,7 +348,7 @@ def notify_slack(totals, stock_providers):
                 table_rows.append((manufacturer, mpn, need, have, available_online, STATUS_LABEL[status]))
 
     today = datetime.date.today().isoformat()
-    header_line = f"🤖 *Electronics MRP snapshot {today}*\n • 6-month component usage projection\n • Status: {STATUS_EMOJI[worst]} "
+    header_line = f"🤖 *Electronics MRP snapshot {today}*\n(based on a 6-month projection of 25 iDEM Triple-GMP devices)\nStatus: {STATUS_EMOJI[worst]} "
 
     if not table_rows:
         text = header_line + " no component shortfalls!"
