@@ -12,6 +12,7 @@ issued from an app registered at https://developer.digikey.com against the
 """
 
 import os
+import re
 import sys
 import time
 
@@ -37,6 +38,14 @@ class DigiKeyError(Exception):
 
 def credentials_present():
     return bool(os.environ.get("DIGIKEY_CLIENT_ID")) and bool(os.environ.get("DIGIKEY_CLIENT_SECRET"))
+
+
+def _normalize_pn(pn):
+    # DigiKey lists Molex parts with dashes stripped and a leading zero
+    # prepended (e.g. our "43045-0225" is their "0430450225"); normalizing
+    # away punctuation and leading zeros on both sides matches these
+    # without weakening the match for manufacturers that don't do this.
+    return re.sub(r"[^A-Za-z0-9]", "", pn or "").upper().lstrip("0")
 
 
 def _get_token():
@@ -104,9 +113,9 @@ def get_stock(manufacturer, mpn):
 
     products = _search_products(mpn)
 
-    target = mpn.strip().lower()
+    target = _normalize_pn(mpn)
     for product in products:
-        if (product.get("ManufacturerProductNumber") or "").strip().lower() == target:
+        if _normalize_pn(product.get("ManufacturerProductNumber")) == target:
             return product.get("QuantityAvailable")
 
     return None
@@ -125,14 +134,14 @@ if __name__ == "__main__":
     except DigiKeyError as exc:
         sys.exit(f"Error: {exc}")
 
-    target = args.mpn.strip().lower()
-    match = next((p for p in products if (p.get("ManufacturerProductNumber") or "").strip().lower() == target), None)
+    target = _normalize_pn(args.mpn)
+    match = next((p for p in products if _normalize_pn(p.get("ManufacturerProductNumber")) == target), None)
 
     if match:
         manufacturer = (match.get("Manufacturer") or {}).get("Name")
-        print(f"{args.mpn}: {match.get('QuantityAvailable')} in stock (Manufacturer={manufacturer!r})")
+        print(f"{args.mpn}: {match.get('QuantityAvailable')} in stock (Manufacturer={manufacturer!r}, DigiKey MPN={match.get('ManufacturerProductNumber')!r})")
     else:
-        print(f"{args.mpn}: no exact match")
+        print(f"{args.mpn}: no match (even after normalizing punctuation/leading zeros)")
         if products:
             print(f"  {len(products)} candidate(s) returned by keyword search:")
             for p in products:

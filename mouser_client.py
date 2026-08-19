@@ -10,6 +10,7 @@ https://www.mouser.com/api-hub/ for the Search API.
 """
 
 import os
+import re
 import sys
 import time
 
@@ -31,6 +32,15 @@ class MouserError(Exception):
 
 def credentials_present():
     return bool(os.environ.get("MOUSER_API_KEY"))
+
+
+def _normalize_pn(pn):
+    # Unlike DigiKey, Mouser wants punctuation present -- it lists Molex
+    # parts with dashes our BOMs omit (e.g. our "430450415" is their
+    # "43045-0415"), but doesn't add a leading zero. Stripping punctuation
+    # on both sides (no leading-zero handling) matches these without
+    # weakening the match for parts that already agree.
+    return re.sub(r"[^A-Za-z0-9]", "", pn or "").upper()
 
 
 def _parse_availability(availability_in_stock):
@@ -103,9 +113,9 @@ def get_stock(manufacturer, mpn):
 
     parts = _search_parts(mpn)
 
-    target = mpn.strip().lower()
+    target = _normalize_pn(mpn)
     for part in parts:
-        if (part.get("ManufacturerPartNumber") or "").strip().lower() == target:
+        if _normalize_pn(part.get("ManufacturerPartNumber")) == target:
             return _parse_availability(part.get("AvailabilityInStock"))
 
     return None
@@ -124,14 +134,14 @@ if __name__ == "__main__":
     except MouserError as exc:
         sys.exit(f"Error: {exc}")
 
-    target = args.mpn.strip().lower()
-    match = next((p for p in parts if (p.get("ManufacturerPartNumber") or "").strip().lower() == target), None)
+    target = _normalize_pn(args.mpn)
+    match = next((p for p in parts if _normalize_pn(p.get("ManufacturerPartNumber")) == target), None)
 
     if match:
         stock = _parse_availability(match.get("AvailabilityInStock"))
-        print(f"{args.mpn}: {stock} in stock (Manufacturer={match.get('Manufacturer')!r})")
+        print(f"{args.mpn}: {stock} in stock (Manufacturer={match.get('Manufacturer')!r}, Mouser MPN={match.get('ManufacturerPartNumber')!r})")
     else:
-        print(f"{args.mpn}: no exact match")
+        print(f"{args.mpn}: no match (even after normalizing punctuation)")
         if parts:
             print(f"  {len(parts)} candidate(s) returned by keyword search:")
             for p in parts:
