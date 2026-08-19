@@ -19,6 +19,7 @@ shared by multiple boards or systems are combined into a single line.
 """
 
 import csv
+import datetime
 import sys
 import time
 from collections import defaultdict
@@ -251,6 +252,12 @@ def total_stock(stock_providers, key):
     return sum(stock.get(key) or 0 for _, stock in stock_providers)
 
 
+def have_stock(key):
+    # Stub for in-house stock -- every part reports 0 until the Boltline
+    # API is hooked up here.
+    return 0
+
+
 def write_report(bucket, totals, path, stock_providers):
     rows = sorted(totals[bucket].items(), key=lambda kv: (kv[0][0].lower(), kv[0][1].lower()))
     header = ["Manufacturer", "Manufacturer Part Number", "Quantity"]
@@ -291,26 +298,95 @@ def write_shortage_report(totals, stock_providers, path):
     return rows
 
 
-def notify_slack(shortage_rows, parts_checked):
+def part_status(need, have, available_online):
+    if available_online >= need:
+        return "green"
+    if available_online + have >= need:
+        return "orange"
+    return "red"
+
+
+STATUS_EMOJI = {"green": "\U0001F7E2", "orange": "\U0001F7E0", "red": "\U0001F534"}
+STATUS_SEVERITY = {"green": 0, "orange": 1, "red": 2}
+# Emoji glyphs aren't monospace-width, even inside a code block -- they
+# throw off column alignment, so the table itself uses plain text labels
+# and the emoji is reserved for the header line.
+STATUS_LABEL = {"orange": "🟠", "red": "🔴"}
+
+
+def build_slack_table(rows):
+    # A monospace code block, not a Block Kit data_table -- the latter has
+    # no compactness control and renders much larger than this.
+    headers = ["Manufacturer", "MPN", "Need", "Have", "Online", "Status"]
+    widths = [max(len(str(row[i])) for row in ([headers] + rows)) for i in range(len(headers))]
+    lines = []
+    for row in [headers] + rows:
+        cells = [str(row[0]).ljust(widths[0])]
+        cells += [str(row[1]).ljust(widths[1])]
+        cells += [str(row[i]).rjust(widths[i]) for i in (2, 3, 4)]
+        cells += [str(row[5]).center(widths[5])]
+        lines.append("   ".join(cells).rstrip())
+    return "```\n" + "\n".join(lines) + "\n```"
+
+
+def notify_slack(totals, stock_providers):
     if not slack_client.credentials_present():
         print("  NOTE: SLACK_BOT_TOKEN / SLACK_CHANNEL not set; skipping Slack notification.")
         return
 
-    if not shortage_rows:
-        message = f"MRP Stock Shortage Report: no shortages -- {parts_checked} part(s) checked against the 6-month forecast."
+    table_rows = []
+    worst = "green"
+    for bucket_totals in totals.values():
+        for key, need in bucket_totals.items():
+            manufacturer, mpn = key
+            available_online = total_stock(stock_providers, key)
+            have = have_stock(key)
+            status = part_status(need, have, available_online)
+            if STATUS_SEVERITY[status] > STATUS_SEVERITY[worst]:
+                worst = status
+            if status != "green":
+                table_rows.append((manufacturer, mpn, need, have, available_online, STATUS_LABEL[status]))
+
+    today = datetime.date.today().isoformat()
+    header_line = f"🤖 *Electronics MRP snapshot {today}*\n • 6-month component usage projection\n • Status: {STATUS_EMOJI[worst]} "
+
+    if not table_rows:
+        text = header_line + " no component shortfalls!"
     else:
-        lines = [f"MRP Stock Shortage Report: {len(shortage_rows)} part(s) short of the 6-month forecast"]
-        for category, manufacturer, mpn, qty, available, shortfall in shortage_rows:
-            lines.append(f"- [{category}] {manufacturer} {mpn}: need {qty}, have {available} (short {shortfall})")
-        message = "\n".join(lines)
+        table_rows.sort(key=lambda r: (r[0].lower(), r[1].lower()))
+        text = header_line + "\n" + build_slack_table(table_rows)
 
     try:
-        slack_client.post_message(message)
+        slack_client.post_message(text)
     except slack_client.SlackError as exc:
         print(f"  WARNING: Slack notification failed: {exc}")
         return
 
     print("  Posted shortage summary to Slack.")
+
+
+def load_stock_from_reports():
+    """
+    Reconstructs totals and stock_providers from the already-written report
+    CSVs, instead of re-running the forecast/BOM expansion and DigiKey/Mouser
+    lookups. For iterating on Slack message formatting without hitting the
+    network or waiting out Mouser's rate-limit pacing.
+    """
+    totals = {"critical": defaultdict(int), "connector": defaultdict(int)}
+    digikey_stock, mouser_stock = {}, {}
+
+    for bucket, path in REPORTS.items():
+        if not path.exists():
+            sys.exit(f"Report file not found: {path} (run mrp_report.py once first)")
+        with open(path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                key = (row["Manufacturer"], row["Manufacturer Part Number"])
+                totals[bucket][key] = int(row["Quantity"])
+                digikey_stock[key] = int(row["DigiKey Stock"]) if row["DigiKey Stock"] else None
+                mouser_stock[key] = int(row["Mouser Stock"]) if row["Mouser Stock"] else None
+
+    stock_providers = [("DigiKey Stock", digikey_stock), ("Mouser Stock", mouser_stock)]
+    return totals, stock_providers
 
 
 def main():
@@ -335,10 +411,9 @@ def main():
     for bucket, path in REPORTS.items():
         write_report(bucket, totals, path, stock_providers)
 
-    shortage_rows = write_shortage_report(totals, stock_providers, SHORTAGE_REPORT_FILE)
+    write_shortage_report(totals, stock_providers, SHORTAGE_REPORT_FILE)
 
-    parts_checked = len({key for bucket_totals in totals.values() for key in bucket_totals})
-    notify_slack(shortage_rows, parts_checked)
+    notify_slack(totals, stock_providers)
 
     if missing_ident:
         print(f"\n{len(missing_ident)} matching line(s) had a blank Manufacturer and/or MPN (included with blank fields):")
@@ -347,4 +422,20 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate MRP stock reports and notify Slack.")
+    parser.add_argument(
+        "--from-reports",
+        action="store_true",
+        help="Skip the forecast/BOM expansion and DigiKey/Mouser lookups -- reuse the "
+        "already-written report CSVs and just re-post to Slack. For iterating on message "
+        "formatting without hitting the network.",
+    )
+    args = parser.parse_args()
+
+    if args.from_reports:
+        totals, stock_providers = load_stock_from_reports()
+        notify_slack(totals, stock_providers)
+    else:
+        main()

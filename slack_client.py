@@ -25,17 +25,26 @@ def credentials_present():
     return bool(os.environ.get("SLACK_BOT_TOKEN")) and bool(os.environ.get("SLACK_CHANNEL"))
 
 
-def post_message(text):
+def post_message(text, blocks=None):
+    """
+    text is always sent as the fallback (shown in notifications, screen
+    readers, and if blocks fail to render); blocks is an optional Block Kit
+    array for richer formatting (e.g. a table block).
+    """
     token = os.environ.get("SLACK_BOT_TOKEN")
     channel = os.environ.get("SLACK_CHANNEL")
     if not token or not channel:
         raise SlackError("SLACK_BOT_TOKEN / SLACK_CHANNEL are not set")
 
+    payload = {"channel": channel, "text": text}
+    if blocks is not None:
+        payload["blocks"] = blocks
+
     try:
         response = requests.post(
             POST_MESSAGE_URL,
             headers={"Authorization": f"Bearer {token}"},
-            json={"channel": channel, "text": text},
+            json=payload,
             timeout=REQUEST_TIMEOUT,
         )
         response.raise_for_status()
