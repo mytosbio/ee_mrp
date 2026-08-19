@@ -12,7 +12,7 @@ Line # ,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacture
 11,BLM31KN121SN1L,Ferrite Beads Multi-Layer 120Ohm 25% 100MHz 6A 0.009Ohm DCR 1206 Automotive T/R,"FB1, FB2",2,Murata,BLM31KN121SN1L,Generic
 12,THVD1406DR,"RS-458 Reansceiver, Half-Duplex, 3.3 to 5.0 V, SOIC-8",IC1,1,TI,THVD1406DR,Critical
 13,43650-0417,Connector Header 4 Position 3 mm Solder Straight Thru-Hole 4 Terminal 1 Port Micro-Fit 3.0™,"J1.1, J1.2, J1.3, J1.4",4,Molex,43650-0417,Connector
-14,RJHSE-5381,"Jack Modular Connector 8p8c (RJ45, Ethernet) 90Â° Angle (Right) Shielded, EMI Finger -",J2,1,Amphenol,RJHSE-5381,Connector
+14,RJHSE5381,"Jack Modular Connector 8p8c (RJ45, Ethernet) 90Â° Angle (Right) Shielded, EMI Finger -",J2,1,Amphenol,RJHSE5381,Connector
 15,742792731,"Ferrite Bead, 90 mΩ DC, 100 Ω @ 100 MHz ± 25%, 1200 mA, 0402 [1005 Metric]","L1.1, L1.2, L1.3, L1.4, L2.1, L2.2, L2.3, L2.4, L3.1, L3.2, L3.3, L3.4, L4.1, L4.2, L4.3, L4.4, L5, L6, L7, L8, L9",21,,,Generic
 16,742792731,"SMD EMI Suppression Ferrite Bead WE-CBF, Z = 100 Ohm",L10,1,Wurth Electronics,742792731,Generic
 17,B82787C0513H002,CMC 51UH 200MA 2LN SMD AEC-Q200,L11,1,,,Likely Replaceable
