@@ -1,43 +1,43 @@
-Manufacturer,Manufacturer Part Number,Quantity
-Allegro MicroSystems,ACS724LLCTR-05AU-T,10
-Analog Devices,AD8040ARZ-REEL7,2
-Analog Devices,LTC6900IS5#TRPBF,6
-Analog Devices,MAX17634CATP+,1
-Analog Devices,TMC5130A-TA,6
-Diodes,AL5809-20P1-7,3
-ECS International,ECS-.327-9-1210-TR,4
-Infineon,ITS4141NHUMA1,5
-IXYS,CPC1916Y,80
-Kingbright,APA3010F3C-GX,12
-Kingbright,APA3010P3BT-GX,12
-Littelfuse,0154001.DR,4
-Littelfuse,0154004.DR,4
-Microchip,MCP6004-I/ST,10
-Microchip,MCP9808-E/MS,7
-Microchip,MIC2005A-1YM5-TR,20
-NDK,CS07826-16M,4
-Nexperia,"74LVC1G14GV,125",8
-onsemi,SMS05T1G,40
-onsemi,SMS24T1G,1
-Phoenix Contact,2961192,1
-Recom Power,R-7312P,1
-Renesas,PS2911-1-F3-AX,80
-Same Sky,CMI-1295-24TH,1
-STMicroelectronics,ESDALC6V1W5,8
-STMicroelectronics,LD39050PU33R,4
-STMicroelectronics,STM32U575ZIT6,4
-Texas Instruments,AM26C32QDR,20
-Texas Instruments,CD40109BPWR,2
-Texas Instruments,DRV8256ERGER,3
-Texas Instruments,HDC3022DEJR,7
-Texas Instruments,LMR36015BRNXR,6
-Texas Instruments,LMV358MX/NOPB,20
-Texas Instruments,NE555DR,6
-Texas Instruments,PCA9306DCTT,10
-Texas Instruments,PCA9555PWR,10
-Texas Instruments,SN74LVC2G02DCUT,10
-Texas Instruments,TLA2528IRTER,3
-TI,THVD1406DR,1
-TI National Semiconductor,LM2678SD-5.0/NOPB,2
-Trinamic,TMC5130A-TA,11
-Vishay Lite-On,LTST-C930KGKT,30
+Manufacturer,Manufacturer Part Number,Quantity,DigiKey Stock,Mouser Stock
+Allegro MicroSystems,ACS724LLCTR-05AU-T,10,,0
+Analog Devices,AD8040ARZ-REEL7,2,,1315
+Analog Devices,LTC6900IS5#TRPBF,6,,4694
+Analog Devices,MAX17634CATP+,1,,1785
+Analog Devices,TMC5130A-TA,6,,4382
+Diodes,AL5809-20P1-7,3,,0
+ECS International,ECS-.327-9-1210-TR,4,,25647
+Infineon,ITS4141NHUMA1,5,,20464
+IXYS,CPC1916Y,80,,292
+Kingbright,APA3010F3C-GX,12,,246
+Kingbright,APA3010P3BT-GX,12,,12004
+Littelfuse,0154001.DR,4,,18308
+Littelfuse,0154004.DR,4,,17018
+Microchip,MCP6004-I/ST,10,,7704
+Microchip,MCP9808-E/MS,7,,2677
+Microchip,MIC2005A-1YM5-TR,20,,25612
+NDK,CS07826-16M,4,,12103
+Nexperia,"74LVC1G14GV,125",8,,2862
+onsemi,SMS05T1G,40,,5209
+onsemi,SMS24T1G,1,,2421
+Phoenix Contact,2961192,1,,2090
+Recom Power,R-7312P,1,,142
+Renesas,PS2911-1-F3-AX,80,,227
+Same Sky,CMI-1295-24TH,1,,360
+STMicroelectronics,ESDALC6V1W5,8,,9587
+STMicroelectronics,LD39050PU33R,4,,1199
+STMicroelectronics,STM32U575ZIT6,4,,671
+Texas Instruments,AM26C32QDR,20,,12061
+Texas Instruments,CD40109BPWR,2,,6748
+Texas Instruments,DRV8256ERGER,3,,3874
+Texas Instruments,HDC3022DEJR,7,,0
+Texas Instruments,LMR36015BRNXR,6,,2124
+Texas Instruments,LMV358MX/NOPB,20,,957
+Texas Instruments,NE555DR,6,,41229
+Texas Instruments,PCA9306DCTT,10,,5991
+Texas Instruments,PCA9555PWR,10,,9292
+Texas Instruments,SN74LVC2G02DCUT,10,,363
+Texas Instruments,TLA2528IRTER,3,,31253
+TI,THVD1406DR,1,,3915
+TI National Semiconductor,LM2678SD-5.0/NOPB,2,,492
+Trinamic,TMC5130A-TA,11,,4382
+Vishay Lite-On,LTST-C930KGKT,30,,107454

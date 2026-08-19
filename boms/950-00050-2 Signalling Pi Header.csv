@@ -16,7 +16,7 @@ Line #,Name,Description,Designator,Quantity,Manufacturer,Manufacturer Part Numbe
 16,10V 200mW,Zener Diode 10V,D21,1,onsemi,MM3Z10VB,Likely replaceable
 9,ESD9X3.3ST5G,TVS DIODE 3.3VWM 10.4VC SOD923,"D3, D4, D5, D10, D16",5,onsemi,ESD9X3.3ST5G,Likely replaceable
 10,150060YS75000,"Led, Yellow, 590 Nm, 2 V, 30 Ma, 120 Mcd Rohs Compliant: Yes","D6, D7, D8, D9",4,Wurth Elektronik,150060YS75000,Likely replaceable
-17,6.3A,"Fuse on holder, 6.3A 125VAC",F1,1,Littelfuse,015406.3DR,Likely replaceable
+17,6.3A,"Fuse on holder, 6.3A 125VAC",F1,1,Littelfuse,015406.3DR,Critical
 18,BLM31KN121SN1L,FERRITE BEAD 120 OHM 1206 1LN,FB1,1,Murata,BLM31KN121SN1L,Likely replaceable
 ,BLM31KN121SN1L,Ferrite Beads Multi-Layer 120Ohm 25% 100MHz 6A 0.009Ohm DCR 1206 Automotive T/R,"FB2, FB3, FB4, FB5, FB6",5,Murata,BLM31KN121SN1L,Likely replaceable
 ,ACM7060-301-2PL-TL01,CMC 5A 2LN 300 OHM SMD,FL1,1,TDK,ACM7060-301-2PL-TL01,Likely replaceable

@@ -1,6 +1,6 @@
 Line #,Manufacturer Part Number,Manufacturer,Quantity,Designator,Description,Status
 1,CC0402KRX5R9BB104,Yageo,13,"C1.1, C1.2, C2.1, C2.2, C9, C12.1, C12.2, C13, C14, C15, C16, C19, C23","Surface Mount Ceramic Multilayer Capacitor, 100nF, 10%, X5R, 50V, 0402",Generic
-2,KAF32LR71H106KL,Kyocera AVX,4,"C3, C17, C18, C21","Surface Mount Ceramic Multilayer Capacitor, FLEXITERM, 10uF, 10%, X7R, 50V, 1210",Generic
+2,KAF32LR71H106KL,Kyocera AVX,4,"C3, C17, C18, C21","Surface Mount Ceramic Multilayer Capacitor, FLEXITERM, 10uF, 10%, X7R, 50V, 1210",Likely Replaceable
 3,C0402C101J1GACTU,Kemet,4,"C4, C5, C6, C7","Surface Mount Ceramic Multilayer Capacitor, 100pF, 5%, C0G, 100V, 0402",Generic
 4,EEEFTV151XAP,Panasonic,1,C8,Cap Aluminum Lytic 150uF 35V 20% (6.3 X 7.7mm) SMD 0.16 Ohm 600mA 2000h 105C Automotive T/R,Generic
 5,CC1206KKX7R9BB475,Yageo,1,C10,"Surface Mount Ceramic Multilayer Capacitor, 4.7uF, 10%, X7R, 50V, 1206",Generic

@@ -8,4 +8,4 @@ Line #,Name,Description,Reference Designators,Quantity,Manufacturer,Manufacturer
 7,CRCW040210K0FKED,"SMD Chip Resistor, 10.0 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose","R1, R2, R3",3,Vishay,CRCW040210K0FKED,Generic
 8,CRCW0402100KFKED,"SMD Chip Resistor, 100 kohm, ± 1%, 62.5 mW, 0402 [1005 Metric], Thick Film, General Purpose","R4, R5, R6, R7, R8",5,Vishay,CRCW0402100KFKED,Generic
 9,HDC3022DEJR,HDC3022DEJR 0.5% RH digital humidity sensor with permanent IP67 filter 8-WSON -40 to 125,U1,1,Texas Instruments,HDC3022DEJR,Critical
-10,MCP9808-E/MS,"0.5 degC Maximum Accuracy Digital Temperature Sensor, 2.7 to 5.5 V, -40 to 125 degC, 8-Pin MSOP, Pb-Free, Tube",U2,1,Microchip,MCP9808-E/MS,Critical
+10,MCP9808-E/MS,"0.5 degC Maximum Accuracy Digital Temperature Sensor, 2.7 to 5.5 V, -40 to 125 degC, 8-Pin MSOP, Pb-Free, Tube",U2,1,Microchip,MCP9808-E/MS,Remove

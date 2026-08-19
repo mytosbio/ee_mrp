@@ -38,4 +38,4 @@ Line #,Name,Description,Designator,Quantity,Value,Manufacturer,Manufacturer Part
 36,MCP6004-I/ST,None,U5,1,,Microchip,MCP6004-I/ST,Critical
 37,ACS724LLCTR-05AU-T,"Hall-effect current sensor, 0->5A",U6,1,,Allegro MicroSystems,ACS724LLCTR-05AU-T,Critical
 39,43045-0225,Conn Power HDR 2 POS Solder ST Thru-Hole 2 Terminal 1 Port Micro-Fit 3.0™ Frame,"X1.1, X1.2, X1.3, X1.4, X1.5, X1.6, X1.7, X1.8",8,,Molex,43045-0225,Connector
-41,0154004.DR,FUSE BRD MNT 4A 125VAC/VDC 2SMD,"XF1, XF2",2,,Littelfuse,0154004.DR,Likely replaceable
+41,0154004.DR,FUSE BRD MNT 4A 125VAC/VDC 2SMD,"XF1, XF2",2,,Littelfuse,0154004.DR,Critical
