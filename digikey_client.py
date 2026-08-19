@@ -12,6 +12,7 @@ issued from an app registered at https://developer.digikey.com against the
 """
 
 import os
+import sys
 import time
 
 import requests
@@ -68,17 +69,7 @@ def _get_token():
     return _token
 
 
-def get_stock(manufacturer, mpn):
-    """
-    Returns the DigiKey QuantityAvailable for the given manufacturer part
-    number as an int, or None if no matching product was found.
-
-    Raises DigiKeyError if credentials are missing or the request fails
-    (bad credentials, network error, rate limit, etc).
-    """
-    if not mpn:
-        return None
-
+def _search_products(mpn):
     token = _get_token()
 
     try:
@@ -97,7 +88,21 @@ def get_stock(manufacturer, mpn):
     except requests.RequestException as exc:
         raise DigiKeyError(f"search failed for {mpn!r}: {exc}") from exc
 
-    products = response.json().get("Products") or []
+    return response.json().get("Products") or []
+
+
+def get_stock(manufacturer, mpn):
+    """
+    Returns the DigiKey QuantityAvailable for the given manufacturer part
+    number as an int, or None if no matching product was found.
+
+    Raises DigiKeyError if credentials are missing or the request fails
+    (bad credentials, network error, rate limit, etc).
+    """
+    if not mpn:
+        return None
+
+    products = _search_products(mpn)
 
     target = mpn.strip().lower()
     for product in products:
@@ -105,3 +110,33 @@ def get_stock(manufacturer, mpn):
             return product.get("QuantityAvailable")
 
     return None
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Look up DigiKey stock for a single part.")
+    parser.add_argument("-m", "--manufacturer", default="", help="Manufacturer name (not used for matching -- DigiKey's keyword search matches on MPN only)")
+    parser.add_argument("-p", "--mpn", required=True, help="Manufacturer part number")
+    args = parser.parse_args()
+
+    try:
+        products = _search_products(args.mpn)
+    except DigiKeyError as exc:
+        sys.exit(f"Error: {exc}")
+
+    target = args.mpn.strip().lower()
+    match = next((p for p in products if (p.get("ManufacturerProductNumber") or "").strip().lower() == target), None)
+
+    if match:
+        manufacturer = (match.get("Manufacturer") or {}).get("Name")
+        print(f"{args.mpn}: {match.get('QuantityAvailable')} in stock (Manufacturer={manufacturer!r})")
+    else:
+        print(f"{args.mpn}: no exact match")
+        if products:
+            print(f"  {len(products)} candidate(s) returned by keyword search:")
+            for p in products:
+                manufacturer = (p.get("Manufacturer") or {}).get("Name")
+                print(f"    {p.get('ManufacturerProductNumber')!r} (Manufacturer={manufacturer!r}, QuantityAvailable={p.get('QuantityAvailable')})")
+        else:
+            print("  no candidates returned at all")

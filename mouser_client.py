@@ -10,6 +10,7 @@ https://www.mouser.com/api-hub/ for the Search API.
 """
 
 import os
+import sys
 import time
 
 import requests
@@ -41,17 +42,7 @@ def _parse_availability(availability_in_stock):
         return None
 
 
-def get_stock(manufacturer, mpn):
-    """
-    Returns the Mouser stock quantity for the given manufacturer part
-    number as an int, or None if no matching product was found (or its
-    availability couldn't be parsed as a number).
-
-    Raises MouserError if the API key is missing or the request fails.
-    """
-    if not mpn:
-        return None
-
+def _search_parts(mpn):
     api_key = os.environ.get("MOUSER_API_KEY")
     if not api_key:
         raise MouserError("MOUSER_API_KEY is not set")
@@ -96,7 +87,21 @@ def get_stock(manufacturer, mpn):
     if errors:
         raise MouserError(f"search failed for {mpn!r}: {errors}")
 
-    parts = (payload.get("SearchResults") or {}).get("Parts") or []
+    return (payload.get("SearchResults") or {}).get("Parts") or []
+
+
+def get_stock(manufacturer, mpn):
+    """
+    Returns the Mouser stock quantity for the given manufacturer part
+    number as an int, or None if no matching product was found (or its
+    availability couldn't be parsed as a number).
+
+    Raises MouserError if the API key is missing or the request fails.
+    """
+    if not mpn:
+        return None
+
+    parts = _search_parts(mpn)
 
     target = mpn.strip().lower()
     for part in parts:
@@ -104,3 +109,33 @@ def get_stock(manufacturer, mpn):
             return _parse_availability(part.get("AvailabilityInStock"))
 
     return None
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Look up Mouser stock for a single part.")
+    parser.add_argument("-m", "--manufacturer", default="", help="Manufacturer name (not used for matching -- Mouser's keyword search matches on MPN only)")
+    parser.add_argument("-p", "--mpn", required=True, help="Manufacturer part number")
+    args = parser.parse_args()
+
+    try:
+        parts = _search_parts(args.mpn)
+    except MouserError as exc:
+        sys.exit(f"Error: {exc}")
+
+    target = args.mpn.strip().lower()
+    match = next((p for p in parts if (p.get("ManufacturerPartNumber") or "").strip().lower() == target), None)
+
+    if match:
+        stock = _parse_availability(match.get("AvailabilityInStock"))
+        print(f"{args.mpn}: {stock} in stock (Manufacturer={match.get('Manufacturer')!r})")
+    else:
+        print(f"{args.mpn}: no exact match")
+        if parts:
+            print(f"  {len(parts)} candidate(s) returned by keyword search:")
+            for p in parts:
+                print(f"    {p.get('ManufacturerPartNumber')!r} (Manufacturer={p.get('Manufacturer')!r}, AvailabilityInStock={p.get('AvailabilityInStock')!r})")
+        else:
+            print("  no candidates returned at all")
+
