@@ -1,5 +1,5 @@
 """
-Generates critical-component and connector demand reports from a 12-month
+Generates critical-component and connector demand reports from a 6-month
 forecast and per-board BOM files.
 
 A forecast row's Part Number may refer either to a board (a BOM file in
@@ -32,7 +32,7 @@ import mouser_client
 MOUSER_REQUEST_INTERVAL = 2.5
 
 BASE_DIR = Path(__file__).resolve().parent
-FORECAST_FILE = BASE_DIR / "forecase_12m.csv"
+FORECAST_FILE = BASE_DIR / "forecase_6m.csv"
 BOMS_DIR = BASE_DIR / "boms"
 SYSTEMS_DIR = BASE_DIR / "systems"
 
@@ -48,6 +48,11 @@ REPORTS = {
     "critical": BASE_DIR / "critical_components_report.csv",
     "connector": BASE_DIR / "connectors_report.csv",
 }
+
+# Not committed by the GitHub Action -- regenerated fresh each run, so
+# there's no history worth keeping for it the way there is for the reports
+# above.
+SHORTAGE_REPORT_FILE = BASE_DIR / "stock_shortage_report.csv"
 
 
 def normalize_header(name):
@@ -160,6 +165,17 @@ def process_bom(path, forecast_qty, totals, missing_ident):
             totals[bucket][key] += forecast_qty * populated_qty
 
 
+def _print_progress(i, total, label):
+    # A live-updating single line in a terminal; discrete lines when piped
+    # to a file/CI log, where \r just leaves garbage instead of updating.
+    if sys.stdout.isatty():
+        print(f"\r  [{i}/{total}] {label}" + " " * 20, end="", flush=True)
+        if i == total:
+            print()
+    else:
+        print(f"  [{i}/{total}] {label}")
+
+
 def fetch_digikey_stock(totals):
     """
     Looks up DigiKey stock for every unique (Manufacturer, MPN) key across all
@@ -173,9 +189,10 @@ def fetch_digikey_stock(totals):
         print("  NOTE: DIGIKEY_CLIENT_ID / DIGIKEY_CLIENT_SECRET not set; skipping DigiKey stock lookup.")
         return stock
 
-    keys = {key for bucket_totals in totals.values() for key in bucket_totals}
+    keys = list({key for bucket_totals in totals.values() for key in bucket_totals})
     not_found = 0
-    for manufacturer, mpn in keys:
+    for i, (manufacturer, mpn) in enumerate(keys, start=1):
+        _print_progress(i, len(keys), f"DigiKey: {mpn}")
         try:
             stock[(manufacturer, mpn)] = digikey_client.get_stock(manufacturer, mpn)
         except digikey_client.DigiKeyError as exc:
@@ -202,11 +219,12 @@ def fetch_mouser_stock(totals):
         print("  NOTE: MOUSER_API_KEY not set; skipping Mouser stock lookup.")
         return stock
 
-    keys = {key for bucket_totals in totals.values() for key in bucket_totals}
+    keys = list({key for bucket_totals in totals.values() for key in bucket_totals})
     not_found = 0
     consecutive_failures = 0
-    for i, (manufacturer, mpn) in enumerate(keys):
-        if i > 0:
+    for i, (manufacturer, mpn) in enumerate(keys, start=1):
+        _print_progress(i, len(keys), f"Mouser: {mpn}")
+        if i > 1:
             time.sleep(MOUSER_REQUEST_INTERVAL)
         try:
             stock[(manufacturer, mpn)] = mouser_client.get_stock(manufacturer, mpn)
@@ -227,16 +245,50 @@ def fetch_mouser_stock(totals):
     return stock
 
 
-def write_report(bucket, totals, path, digikey_stock, mouser_stock):
+def total_stock(stock_providers, key):
+    # Unknown per-supplier stock (missing credentials, lookup failure, not
+    # carried) counts as 0 rather than being excluded -- otherwise a part
+    # nobody could look up would silently vanish from the shortage report
+    # instead of correctly showing as fully short.
+    return sum(stock.get(key) or 0 for _, stock in stock_providers)
+
+
+def write_report(bucket, totals, path, stock_providers):
     rows = sorted(totals[bucket].items(), key=lambda kv: (kv[0][0].lower(), kv[0][1].lower()))
+    header = ["Manufacturer", "Manufacturer Part Number", "Quantity"]
+    header += [label for label, _ in stock_providers]
+    header += ["Total Stock"]
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["Manufacturer", "Manufacturer Part Number", "Quantity", "DigiKey Stock", "Mouser Stock"])
-        for (manufacturer, mpn), qty in rows:
-            dk = digikey_stock.get((manufacturer, mpn))
-            mo = mouser_stock.get((manufacturer, mpn))
-            writer.writerow([manufacturer, mpn, qty, dk if dk is not None else "", mo if mo is not None else ""])
+        writer.writerow(header)
+        for key, qty in rows:
+            manufacturer, mpn = key
+            values = [stock.get(key) for _, stock in stock_providers]
+            row = [manufacturer, mpn, qty]
+            row += [v if v is not None else "" for v in values]
+            row += [total_stock(stock_providers, key)]
+            writer.writerow(row)
     print(f"Wrote {len(rows)} {bucket} component line(s) to {path.name}")
+
+
+def write_shortage_report(totals, stock_providers, path):
+    """
+    Lists every critical/connector part whose combined stock across all
+    suppliers falls short of the 6-month forecasted quantity.
+    """
+    rows = []
+    for bucket, category in [("critical", "Critical"), ("connector", "Connector")]:
+        for (manufacturer, mpn), qty in totals[bucket].items():
+            available = total_stock(stock_providers, (manufacturer, mpn))
+            if available < qty:
+                rows.append((category, manufacturer, mpn, qty, available, qty - available))
+
+    rows.sort(key=lambda r: (r[0], r[1].lower(), r[2].lower()))
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["Category", "Manufacturer", "Manufacturer Part Number", "Quantity Required", "Total Stock", "Shortfall"])
+        writer.writerows(rows)
+    print(f"Wrote {len(rows)} shortage line(s) to {path.name}")
 
 
 def main():
@@ -253,11 +305,15 @@ def main():
     for part_number, name, forecast_qty in forecast_rows:
         expand(part_number, name, forecast_qty, totals, missing_ident, frozenset())
 
-    digikey_stock = fetch_digikey_stock(totals)
-    mouser_stock = fetch_mouser_stock(totals)
+    stock_providers = [
+        ("DigiKey Stock", fetch_digikey_stock(totals)),
+        ("Mouser Stock", fetch_mouser_stock(totals)),
+    ]
 
     for bucket, path in REPORTS.items():
-        write_report(bucket, totals, path, digikey_stock, mouser_stock)
+        write_report(bucket, totals, path, stock_providers)
+
+    write_shortage_report(totals, stock_providers, SHORTAGE_REPORT_FILE)
 
     if missing_ident:
         print(f"\n{len(missing_ident)} matching line(s) had a blank Manufacturer and/or MPN (included with blank fields):")
