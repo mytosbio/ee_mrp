@@ -49,9 +49,6 @@ REPORTS = {
     "connector": BASE_DIR / "connectors_report.csv",
 }
 
-# Not committed by the GitHub Action -- regenerated fresh each run, so
-# there's no history worth keeping for it the way there is for the reports
-# above.
 SHORTAGE_REPORT_FILE = BASE_DIR / "stock_shortage_report.csv"
 
 
