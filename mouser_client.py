@@ -52,6 +52,17 @@ def _parse_availability(availability_in_stock):
         return None
 
 
+def _parse_json(response, mpn):
+    try:
+        return response.json()
+    except ValueError as exc:
+        # A transient gateway blip can return a non-JSON (sometimes empty
+        # or whitespace-only) body with a 200 status; surface it as a
+        # MouserError so the per-part retry/skip logic in mrp_report.py
+        # handles it instead of the raw decode error crashing the run.
+        raise MouserError(f"search failed for {mpn!r}: invalid JSON response -- {response.text[:300]!r}") from exc
+
+
 def _search_parts(mpn):
     api_key = os.environ.get("MOUSER_API_KEY")
     if not api_key:
@@ -76,7 +87,7 @@ def _search_parts(mpn):
         except requests.RequestException as exc:
             raise MouserError(f"search failed for {mpn!r}: {exc}") from exc
 
-        errors = (response.json().get("Errors") or []) if response.content else []
+        errors = (_parse_json(response, mpn).get("Errors") or []) if response.content else []
         rate_limited = any(e.get("Code") == "TooManyRequests" for e in errors)
         if rate_limited and attempt < RATE_LIMIT_RETRIES:
             time.sleep(RATE_LIMIT_COOLDOWN)
@@ -93,7 +104,7 @@ def _search_parts(mpn):
             message = f"{message} -- {response.text[:300]}"
         raise MouserError(f"search failed for {mpn!r}: {message}") from exc
 
-    payload = response.json()
+    payload = _parse_json(response, mpn)
     if errors:
         raise MouserError(f"search failed for {mpn!r}: {errors}")
 
