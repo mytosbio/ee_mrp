@@ -1,6 +1,7 @@
 Category,Manufacturer,Manufacturer Part Number,Quantity Required,Total Stock,Shortfall
-Connector,Molex,430450610,200,196,4
+Connector,Molex,430450610,200,118,82
 Critical,Allegro MicroSystems,ACS724LLCTR-05AU-T,250,0,250
 Critical,Diodes,AL5809-20P1-7,75,0,75
+Critical,IXYS,CPC1916Y,2000,1048,952
 Critical,Renesas,PS2911-1-F3-AX,2000,0,2000
 Critical,Texas Instruments,HDC3022DEJR,175,0,175
