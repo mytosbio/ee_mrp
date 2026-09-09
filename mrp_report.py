@@ -25,6 +25,7 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
+import boltline_client
 import digikey_client
 import mouser_client
 import slack_client
@@ -252,10 +253,43 @@ def total_stock(stock_providers, key):
     return sum(stock.get(key) or 0 for _, stock in stock_providers)
 
 
-def have_stock(key):
-    # Stub for in-house stock -- every part reports 0 until the Boltline
-    # API is hooked up here.
-    return 0
+def fetch_boltline_stock(totals, stock_providers):
+    """
+    Looks up Boltline (in-house) stock, but only for keys where DigiKey +
+    Mouser stock already falls short of the forecasted quantity (the same
+    set write_shortage_report flags) -- have_stock() only ever changes a
+    part's Slack status when available_online alone isn't enough (see
+    part_status), so querying a part that's already covered by external
+    stock would just burn an API call for a number that can't change the
+    outcome. Returns a dict of key -> quantity on hand. If credentials are
+    missing, or a request fails, lookups are abandoned for the rest of the
+    run and the remaining keys are left absent (reported as 0 have stock,
+    same as an in-house part that's genuinely never been stocked).
+    """
+    stock = {}
+    if not boltline_client.credentials_present():
+        print("  NOTE: BOLTLINE_API_KEY not set; skipping Boltline stock lookup.")
+        return stock
+
+    at_risk_keys = list({
+        key
+        for bucket_totals in totals.values()
+        for key, qty in bucket_totals.items()
+        if total_stock(stock_providers, key) < qty
+    })
+    for i, (manufacturer, mpn) in enumerate(at_risk_keys, start=1):
+        _print_progress(i, len(at_risk_keys), f"Boltline: {mpn}")
+        try:
+            stock[(manufacturer, mpn)] = boltline_client.get_stock(manufacturer, mpn)
+        except boltline_client.BoltlineError as exc:
+            print(f"  WARNING: Boltline lookup aborted: {exc}")
+            break
+
+    return stock
+
+
+def have_stock(boltline_stock, key):
+    return boltline_stock.get(key) or 0
 
 
 def write_report(bucket, totals, path, stock_providers):
@@ -329,7 +363,7 @@ def build_slack_table(rows):
     return "```\n" + "\n".join(lines) + "\n```"
 
 
-def notify_slack(totals, stock_providers):
+def notify_slack(totals, stock_providers, boltline_stock):
     if not slack_client.credentials_present():
         print("  NOTE: SLACK_BOT_TOKEN / SLACK_CHANNEL not set; skipping Slack notification.")
         return
@@ -340,7 +374,7 @@ def notify_slack(totals, stock_providers):
         for key, need in bucket_totals.items():
             manufacturer, mpn = key
             available_online = total_stock(stock_providers, key)
-            have = have_stock(key)
+            have = have_stock(boltline_stock, key)
             status = part_status(need, have, available_online)
             if STATUS_SEVERITY[status] > STATUS_SEVERITY[worst]:
                 worst = status
@@ -413,7 +447,8 @@ def main():
 
     write_shortage_report(totals, stock_providers, SHORTAGE_REPORT_FILE)
 
-    notify_slack(totals, stock_providers)
+    boltline_stock = fetch_boltline_stock(totals, stock_providers)
+    notify_slack(totals, stock_providers, boltline_stock)
 
     if missing_ident:
         print(f"\n{len(missing_ident)} matching line(s) had a blank Manufacturer and/or MPN (included with blank fields):")
@@ -436,6 +471,9 @@ if __name__ == "__main__":
 
     if args.from_reports:
         totals, stock_providers = load_stock_from_reports()
-        notify_slack(totals, stock_providers)
+        # Boltline stock isn't persisted to the report CSVs (have_stock never
+        # was, even as a stub) -- skipped here too, staying true to "without
+        # hitting the network".
+        notify_slack(totals, stock_providers, {})
     else:
         main()
