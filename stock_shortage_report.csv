@@ -1,6 +1,8 @@
 Category,Manufacturer,Manufacturer Part Number,Quantity Required,Total Stock,Shortfall
-Critical,IXYS,CPC1916Y,2000,6,1994
+Critical,IXYS,CPC1916Y,2000,16,1984
 Critical,Nexperia,"74LVC1G14GV,125",200,0,200
+Critical,Recom Power,R-7312P,25,0,25
 Critical,Renesas,PS2911-1-F3-AX,2000,0,2000
 Critical,Texas Instruments,HDC3022DEJR,175,0,175
-Critical,Texas Instruments,LMV358MX/NOPB,500,463,37
+Critical,Texas Instruments,LMV358MX/NOPB,500,311,189
+Critical,Texas Instruments,PCA9306DCTT,250,91,159
