@@ -26,6 +26,7 @@ jobs:
           DIGIKEY_CLIENT_ID: ${{ secrets.DIGIKEY_CLIENT_ID }}
           DIGIKEY_CLIENT_SECRET: ${{ secrets.DIGIKEY_CLIENT_SECRET }}
           MOUSER_API_KEY: ${{ secrets.MOUSER_API_KEY }}
+          BOLTLINE_API_KEY: ${{ secrets.BOLTLINE_API_KEY }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
         run: python mrp_report.py
