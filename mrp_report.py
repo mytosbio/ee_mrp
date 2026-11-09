@@ -34,6 +34,12 @@ import slack_client
 # a much costlier fallback if we blow through it instead).
 MOUSER_REQUEST_INTERVAL = 2.5
 
+# Safety margin for the Slack report: a part that relies on online stock and
+# whose combined stock (online + in-house) covers the forecast by less than
+# this many units is flagged amber. Distributor stock can drop from tens to
+# zero between weekly runs, so "just enough" isn't treated as safe.
+STOCK_BUFFER = 1000
+
 BASE_DIR = Path(__file__).resolve().parent
 FORECAST_FILE = BASE_DIR / "forecase_6m.csv"
 BOMS_DIR = BASE_DIR / "boms"
@@ -256,12 +262,10 @@ def total_stock(stock_providers, key):
 def fetch_boltline_stock(totals, stock_providers):
     """
     Looks up Boltline (in-house) stock, but only for keys where DigiKey +
-    Mouser stock already falls short of the forecasted quantity (the same
-    set write_shortage_report flags) -- have_stock() only ever changes a
-    part's Slack status when available_online alone isn't enough (see
-    part_status), so querying a part that's already covered by external
-    stock would just burn an API call for a number that can't change the
-    outcome. Returns a dict of key -> quantity on hand. If credentials are
+    Mouser stock falls short of the forecasted quantity plus STOCK_BUFFER --
+    a part with at least that much online stock is unreported regardless of
+    in-house stock (see part_status), so querying it would just burn an API
+    call for a number that can't change the outcome. Returns a dict of key -> quantity on hand. If credentials are
     missing, or a request fails, lookups are abandoned for the rest of the
     run and the remaining keys are left absent (reported as 0 have stock,
     same as an in-house part that's genuinely never been stocked).
@@ -275,7 +279,7 @@ def fetch_boltline_stock(totals, stock_providers):
         key
         for bucket_totals in totals.values()
         for key, qty in bucket_totals.items()
-        if total_stock(stock_providers, key) < qty
+        if total_stock(stock_providers, key) < qty + STOCK_BUFFER
     })
     for i, (manufacturer, mpn) in enumerate(at_risk_keys, start=1):
         _print_progress(i, len(at_risk_keys), f"Boltline: {mpn}")
@@ -333,19 +337,34 @@ def write_shortage_report(totals, stock_providers, path):
 
 
 def part_status(need, have, available_online):
-    if available_online >= need:
-        return "green"
-    if available_online + have >= need:
+    """
+    Checked in order:
+    red:     online + in-house doesn't cover the need.
+    patched: in-house stock alone covers the need, while online doesn't.
+             (If both cover it, nothing to report.)
+    orange:  covered, but relying on online stock with less than
+             STOCK_BUFFER units of margin -- distributor stock can vanish.
+    patched: online alone doesn't cover the need, but online + in-house
+             does, with at least STOCK_BUFFER margin.
+    ok:      online covers the need and the margin is comfortable; not
+             reported.
+    """
+    combined = available_online + have
+    if combined < need:
+        return "red"
+    if have >= need:
+        return "patched" if available_online < need else "ok"
+    if combined < need + STOCK_BUFFER:
         return "orange"
-    return "red"
+    if available_online < need:
+        return "patched"
+    return "ok"
 
 
-STATUS_EMOJI = {"green": "\U0001F7E2", "orange": "\U0001F7E0", "red": "\U0001F534"}
-STATUS_SEVERITY = {"green": 0, "orange": 1, "red": 2}
-# Emoji glyphs aren't monospace-width, even inside a code block -- they
-# throw off column alignment, so the table itself uses plain text labels
-# and the emoji is reserved for the header line.
-STATUS_LABEL = {"orange": "🟠", "red": "🔴"}
+STATUS_SEVERITY = {"ok": 0, "patched": 1, "orange": 2, "red": 3}
+# Emoji for the header line (overall worst status) and the table's Status
+# column. "ok" parts are never listed, so 🟢 only ever appears in the header.
+STATUS_EMOJI = {"ok": "🟢", "patched": "🩹", "orange": "🟠", "red": "🔴"}
 
 
 def build_slack_table(rows):
@@ -369,7 +388,7 @@ def notify_slack(totals, stock_providers, boltline_stock):
         return
 
     table_rows = []
-    worst = "green"
+    worst = "ok"
     for bucket_totals in totals.values():
         for key, need in bucket_totals.items():
             manufacturer, mpn = key
@@ -378,8 +397,8 @@ def notify_slack(totals, stock_providers, boltline_stock):
             status = part_status(need, have, available_online)
             if STATUS_SEVERITY[status] > STATUS_SEVERITY[worst]:
                 worst = status
-            if status != "green":
-                table_rows.append((manufacturer, mpn, need, have, available_online, STATUS_LABEL[status]))
+            if status != "ok":
+                table_rows.append((manufacturer, mpn, need, have, available_online, STATUS_EMOJI[status]))
 
     today = datetime.date.today().isoformat()
     header_line = f"🤖 *Electronics MRP snapshot {today}*\n(based on a 6-month projection of 25 iDEM Triple-GMP devices)\nStatus: {STATUS_EMOJI[worst]} "
